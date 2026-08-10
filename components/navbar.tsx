@@ -47,7 +47,10 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-8">
-          <Link href="#" className="text-[15px] font-medium text-slate-500 hover:text-blue-900 transition-colors hidden sm:block">
+          <Link 
+            href="/login"
+            className="text-[15px] font-medium text-slate-500 hover:text-blue-900 transition-colors hidden sm:block"
+          >
             Login
           </Link>
           <Link
