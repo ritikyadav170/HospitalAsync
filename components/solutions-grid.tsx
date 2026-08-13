@@ -1,5 +1,6 @@
 import { ChevronRight, WalletCards, MessageSquareWarning, Activity, Cpu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import solution1 from "@/assets/images/solution1.png";
 import solution2 from "@/assets/images/solution2.png";
 import solution3 from "@/assets/images/solution3.png";
@@ -12,28 +13,32 @@ export function SolutionsGrid() {
       desc: "Automate and streamline your claims lifecycle with AI-driven validation. Reduce processing errors by 40% while ensuring complete HIPAA compliance and transparent audit trails for large-scale operations.",
       icon: <WalletCards className="h-5 w-5" />,
       image: solution1,
-      color: "text-teal-600"
+      color: "text-teal-600",
+      href: "/solutions/claim-sync"
     },
     {
       title: "Complaint Management",
       desc: "Transform patient feedback into actionable quality improvements. Our intelligent triage system identifies critical concerns in real-time, facilitating rapid resolution and enhancing patient satisfaction.",
       icon: <MessageSquareWarning className="h-5 w-5" />,
       image: solution2,
-      color: "text-blue-600"
+      color: "text-blue-600",
+      href: "/solutions"
     },
     {
       title: "Incident Management",
       desc: "Enhance patient safety through proactive risk mitigation. Record, track, and analyze clinical incidents with automated reporting to regulatory bodies and deep-dive root cause analysis tools.",
       icon: <Activity className="h-5 w-5" />,
       image: solution3,
-      color: "text-red-500"
+      color: "text-red-500",
+      href: "/solutions"
     },
     {
       title: "Asset Management",
       desc: "Optimise your facility's operational readiness. Track medical equipment lifecycle, manage preventative maintenance schedules, and reduce downtime with IoT-integrated asset monitoring solutions.",
       icon: <Cpu className="h-5 w-5" />,
       image: solution4,
-      color: "text-indigo-600"
+      color: "text-indigo-600",
+      href: "/solutions"
     }
   ];
 
@@ -67,12 +72,18 @@ export function SolutionsGrid() {
                 </p>
 
                 <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100">
-                  <button className="flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors">
+                  <Link 
+                    href={feat.href}
+                    className="flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors"
+                  >
                     View More <ChevronRight className="h-4 w-4 ml-1" />
-                  </button>
-                  <button className="rounded-full bg-[#1A1053] px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 transition-all">
+                  </Link>
+                  <Link 
+                    href="/demo"
+                    className="rounded-full bg-[#1A1053] px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 transition-all"
+                  >
                     Book A Demo
-                  </button>
+                  </Link>
                 </div>
               </div>
 

@@ -1,4 +1,5 @@
 import { UserRound, Stethoscope, Microscope, PackagePlus } from "lucide-react";
+import Link from "next/link";
 
 export function SolutionsSection() {
   const cards = [
@@ -6,21 +7,25 @@ export function SolutionsSection() {
       icon: <UserRound className="h-8 w-8 text-sky-500" />,
       title: "Claim Sync",
       desc: "Automate and streamline your claims lifecycle.",
+      href: "/solutions/claim-sync"
     },
     {
       icon: <Stethoscope className="h-8 w-8 text-sky-500" />,
       title: "Complaint Management",
       desc: "Transform patient feedback into actionable quality improvements.",
+      href: "/solutions"
     },
     {
       icon: <Microscope className="h-8 w-8 text-sky-500" />,
       title: "Incident Management",
       desc: "Automated billing and reporting.",
+      href: "/solutions"
     },
     {
       icon: <PackagePlus className="h-8 w-8 text-sky-500" />,
       title: "Asset Management",
       desc: "Basic care and inventory optimization.",
+      href: "/solutions"
     }
   ];
 
@@ -51,12 +56,18 @@ export function SolutionsSection() {
               <p className="text-center text-slate-500 mb-8 flex-grow">{card.desc}</p>
               
               <div className="flex gap-3 w-full">
-                <button className="flex-1 py-2.5 rounded-full border border-slate-200 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+                <Link 
+                  href={card.href}
+                  className="flex-1 py-2.5 text-center rounded-full border border-slate-200 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                >
                   View More
-                </button>
-                <button className="flex-1 py-2.5 rounded-full bg-[#1A1053] text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 transition-colors">
+                </Link>
+                <Link 
+                  href="/demo"
+                  className="flex-1 py-2.5 text-center rounded-full bg-[#1A1053] text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 transition-colors"
+                >
                   Demo
-                </button>
+                </Link>
               </div>
             </div>
           ))}

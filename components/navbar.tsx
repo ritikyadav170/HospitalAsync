@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 export function Navbar() {
   const pathname = usePathname();
-  
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-xl">
       <div className="container mx-auto flex h-24 items-center justify-between px-6 lg:px-12">
@@ -18,28 +18,28 @@ export function Navbar() {
             Health<span className="text-teal-500">Sync</span>
           </span>
         </div>
-        
+
         <div className="hidden items-center gap-10 lg:flex">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className={`text-[15px] transition-colors ${pathname === '/' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
           >
             Home
           </Link>
-          <Link 
-            href="/solutions" 
+          <Link
+            href="/solutions"
             className={`text-[15px] transition-colors ${pathname === '/solutions' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
           >
             Solutions
           </Link>
-          <Link 
-            href="/infrastructure" 
+          <Link
+            href="/infrastructure"
             className={`text-[15px] transition-colors ${pathname === '/infrastructure' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
           >
             Global Infrastructure
           </Link>
-          <Link 
-            href="/careers" 
+          <Link
+            href="/careers"
             className={`text-[15px] transition-colors ${pathname === '/careers' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
           >
             Careers
@@ -47,14 +47,14 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-8">
-          <Link 
+          {/* <Link 
             href="/login"
             className="text-[15px] font-medium text-slate-500 hover:text-blue-900 transition-colors hidden sm:block"
           >
             Login
-          </Link>
+          </Link> */}
           <Link
-            href="#"
+            href="/demo"
             className="rounded-full bg-[#1A1053] px-7 py-3 text-[15px] font-semibold text-white shadow-lg shadow-indigo-900/20 hover:bg-[#1A1053]/90 hover:-translate-y-0.5 transition-all"
           >
             Request Demo
