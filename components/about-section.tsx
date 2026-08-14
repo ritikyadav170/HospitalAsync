@@ -32,7 +32,7 @@ export function AboutSection() {
               ESTABLISHED 2018
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6">
               The Future of Connected Healthcare
             </h1>
 
@@ -47,7 +47,7 @@ export function AboutSection() {
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
+
             {/* Left Headline */}
             <div className="lg:col-span-5 flex flex-col items-start">
               <span className="text-xs font-extrabold tracking-widest text-sky-600 uppercase mb-4">
@@ -101,7 +101,7 @@ export function AboutSection() {
       <section className="bg-[#1A1053] py-16 text-white">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
-            
+
             <div className="flex flex-col items-start justify-center pt-4 md:pt-0">
               <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
                 GLOBAL REACH

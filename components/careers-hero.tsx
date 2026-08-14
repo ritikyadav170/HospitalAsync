@@ -10,7 +10,7 @@ export function CareersHero() {
           Join the Mission
         </div>
 
-        <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-extrabold text-[#1A1053] leading-[1.1] mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-bold text-[#1A1053] leading-[1.1] mb-6">
           Help us synchronize the future of global healthcare.
         </h1>
 

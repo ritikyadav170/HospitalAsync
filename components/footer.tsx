@@ -55,9 +55,9 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-[#1A1053] text-sm tracking-wider uppercase mb-2">Legal</h4>
             <Link href="/privacy" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Privacy Policy</Link>
-            <a href="#" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Compliance</a>
+            <Link href="/compliance" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Compliance</Link>
             <Link href="/terms" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Terms of Service</Link>
-            <a href="#" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">HIPAA Statement</a>
+            <Link href="/hipaa" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">HIPAA Statement</Link>
           </div>
 
         </div>
