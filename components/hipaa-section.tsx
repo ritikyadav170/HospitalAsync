@@ -15,7 +15,7 @@ export function HipaaSection() {
         
         {/* Main Hero Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1A1053] tracking-tight leading-[1.15] mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1053] tracking-tight leading-[1.15] mb-4">
             Let&apos;s build the future of <span className="text-[#02a9da]">digital health</span>
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed">

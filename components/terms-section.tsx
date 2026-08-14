@@ -16,7 +16,7 @@ export function TermsSection() {
   return (
     <div className="w-full bg-white font-sans text-slate-900 py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
-        
+
         {/* Header Title Section */}
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-cyan-50 px-4 py-1.5 text-xs font-bold text-teal-700 border border-cyan-200/80 shadow-sm mb-6">
@@ -24,7 +24,7 @@ export function TermsSection() {
             TRUST & COMPLIANCE
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1A1053] tracking-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1053] tracking-tight mb-4">
             Terms of Service
           </h1>
 
@@ -35,7 +35,7 @@ export function TermsSection() {
 
         {/* 2 Columns Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Sticky Sidebar */}
           <div className="lg:col-span-4 sticky top-28 space-y-8">
             <div className="bg-slate-50/70 border border-slate-100 rounded-3xl p-6 shadow-sm">
@@ -70,10 +70,10 @@ export function TermsSection() {
 
           {/* Right Main Content Area */}
           <div className="lg:col-span-8 space-y-16">
-            
+
             {/* 1. Introduction Section */}
             <div id="sec-1" className="bg-white border border-slate-200/80 rounded-3xl p-8 sm:p-10 shadow-sm">
-              <h2 className="text-3xl font-extrabold text-[#1A1053] tracking-tight mb-6">
+              <h2 className="text-3xl font-bold text-[#1A1053] tracking-tight mb-6">
                 1. Introduction
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">

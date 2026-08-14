@@ -1,17 +1,17 @@
-import { 
-  ShieldCheck, 
-  Gavel, 
-  Info, 
-  Database, 
-  Shield, 
-  Lock, 
-  UserCheck, 
-  Mail, 
-  User, 
-  Sliders, 
-  CheckCircle2, 
-  KeyRound, 
-  ShieldOff 
+import {
+  ShieldCheck,
+  Gavel,
+  Info,
+  Database,
+  Shield,
+  Lock,
+  UserCheck,
+  Mail,
+  User,
+  Sliders,
+  CheckCircle2,
+  KeyRound,
+  ShieldOff
 } from "lucide-react";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ export function PrivacySection() {
   return (
     <div className="w-full bg-white font-sans text-slate-900 py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
-        
+
         {/* Header Title Section */}
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-cyan-100/70 px-4 py-1.5 text-xs font-bold text-teal-900 border border-cyan-200 shadow-sm mb-6">
@@ -36,7 +36,7 @@ export function PrivacySection() {
             Privacy Commitment 2024
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1A1053] tracking-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1053] tracking-tight mb-4">
             Privacy Policy & Data Protection
           </h1>
 
@@ -76,7 +76,7 @@ export function PrivacySection() {
 
         {/* 2 Columns Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Navigation Sidebar */}
           <div className="lg:col-span-4 sticky top-28 space-y-6">
             <div className="bg-slate-50/70 border border-slate-100 rounded-3xl p-6 shadow-sm">
@@ -100,7 +100,7 @@ export function PrivacySection() {
 
           {/* Right Main Content Column */}
           <div className="lg:col-span-8 space-y-16">
-            
+
             {/* 1. Introduction Section */}
             <div id="sec-1" className="space-y-4">
               <h2 className="text-3xl font-extrabold text-[#1A1053] tracking-tight">
