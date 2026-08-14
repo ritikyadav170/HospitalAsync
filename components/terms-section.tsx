@@ -1,4 +1,4 @@
-import { ShieldCheck, Shield, Sparkles, CheckCircle2, Download, HelpCircle, Mail, FileText } from "lucide-react";
+import { ShieldCheck, Shield, Sparkles, CheckCircle2, Download, HelpCircle, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import termsIp from "@/assets/images/terms-ip.png";
