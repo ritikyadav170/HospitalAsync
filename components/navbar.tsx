@@ -26,6 +26,12 @@ export function Navbar() {
           >
             Home
           </Link>
+          {/* <Link
+            href="/about"
+            className={`text-[15px] transition-colors ${pathname === '/about' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
+          >
+            About Us
+          </Link> */}
           <Link
             href="/solutions"
             className={`text-[15px] transition-colors ${pathname === '/solutions' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
@@ -37,6 +43,12 @@ export function Navbar() {
             className={`text-[15px] transition-colors ${pathname === '/infrastructure' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
           >
             Global Infrastructure
+          </Link>
+          <Link
+            href="/about"
+            className={`text-[15px] transition-colors ${pathname === '/about' ? 'font-semibold text-blue-900 border-b-2 border-blue-600 pb-1.5' : 'font-medium text-slate-500 hover:text-blue-900'}`}
+          >
+            About Us
           </Link>
           <Link
             href="/careers"

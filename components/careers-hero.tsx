@@ -1,4 +1,6 @@
 import { ArrowDown } from "lucide-react";
+import Image from "next/image";
+import career1 from "@/assets/images/career1.png";
 
 export function CareersHero() {
   return (
@@ -29,12 +31,13 @@ export function CareersHero() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.4fr_0.9fr] items-start">
           <div className="rounded-[2rem] overflow-hidden border border-slate-200 shadow-2xl shadow-slate-200/20">
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-              alt="Healthcare team collaborating"
+            <Image
+              src={career1}
+              alt="Healthcare technology team collaborating"
               className="w-full h-80 object-cover"
+              priority
             />
-            <div className="bg-white px-6 py-6">
+            <div className="bg-white px-6 py-6 text-left">
               <h3 className="text-xl font-semibold text-[#1A1053] mb-2">
                 Collaborative Health Innovation
               </h3>

@@ -1,10 +1,10 @@
-import { ArrowRight, ShieldCheck, Wand2, ArrowRightLeft, Network, Boxes, Shield } from "lucide-react";
+import { ArrowRight, HeartHandshake, MessageSquareHeart, ShieldAlert, Sparkles, Network, Boxes, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import image4 from "@/assets/images/image4.png";
+import solution2 from "@/assets/images/solution2.png";
 import userImg from "@/assets/images/user.jpg";
 
-export function ClaimSyncDetail() {
+export function ComplaintManagementDetail() {
   return (
     <div className="w-full bg-white">
       {/* 1. Hero Header Section */}
@@ -14,17 +14,17 @@ export function ClaimSyncDetail() {
             
             {/* Left Content */}
             <div className="flex-1 flex flex-col items-start gap-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-cyan-50 px-4 py-1.5 text-xs font-semibold text-teal-700 border border-cyan-200/60 shadow-sm">
-                <span className="h-2 w-2 rounded-full bg-teal-500 animate-pulse" />
-                Core Enterprise Module
+              <div className="inline-flex items-center gap-2 rounded-full bg-sky-50 px-4 py-1.5 text-xs font-semibold text-sky-700 border border-sky-200/60 shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-sky-500 animate-pulse" />
+                Patient Experience & Quality Module
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1A1053] leading-[1.12] tracking-tight">
-                Claim Sync: AI-Driven Revenue Cycle Management
+                Complaint Management: Patient Feedback to Quality Care
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-                Eliminate administrative friction with high-precision automation. Claim Sync automates insurance verification, claim scrubbing, and processing to accelerate your revenue cycle.
+                Transform patient grievances into actionable quality improvements with AI-driven sentiment analysis, multi-channel triage, and automated resolution workflows.
               </p>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2 w-full sm:w-auto">
@@ -45,18 +45,18 @@ export function ClaimSyncDetail() {
             <div className="flex-1 w-full max-w-2xl relative">
               <div className="relative rounded-3xl bg-slate-900 border-[10px] border-slate-800 p-2 shadow-2xl shadow-indigo-950/20 overflow-hidden aspect-[4/3] flex items-center justify-center">
                 <Image
-                  src={image4}
-                  alt="Claim Sync Dashboard"
+                  src={solution2}
+                  alt="Complaint Management Dashboard"
                   className="object-cover w-full h-full rounded-xl"
                 />
 
-                {/* Floating Status Card Badge Overlay */}
+                {/* Floating Status Badge Overlay */}
                 <div className="absolute top-6 left-6 flex flex-col bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/80 z-20 min-w-[170px]">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                    CLAIM STATUS
+                    RESOLUTION RATE
                   </span>
-                  <span className="text-xl md:text-2xl font-extrabold text-emerald-600 mt-0.5">
-                    99.9% Valid
+                  <span className="text-xl md:text-2xl font-extrabold text-sky-600 mt-0.5">
+                    98.4% Solved
                   </span>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export function ClaimSyncDetail() {
         </div>
       </section>
 
-      {/* 2. Proven Enterprise ROI (Dark Navy Stats Section) */}
+      {/* 2. Proven Enterprise ROI */}
       <section className="bg-[#1A1053] py-16 md:py-20 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -74,32 +74,30 @@ export function ClaimSyncDetail() {
             {/* Left Description */}
             <div className="flex-1 max-w-xl">
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">
-                Proven Enterprise ROI
+                Elevate Patient Trust & Retention
               </h2>
               <p className="text-slate-300 text-base md:text-lg leading-relaxed">
-                HealthSync&apos;s Claim Sync module isn&apos;t just software—it&apos;s a financial engine designed for large-scale clinical throughput.
+                HealthSync&apos;s Complaint Management engine automates grievance tracking, ensuring total compliance with healthcare regulatory bodies while elevating HCAHPS scores.
               </p>
             </div>
 
             {/* Right Stat Cards */}
             <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
-              {/* Stat Card 1 */}
               <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-8 flex flex-col justify-center">
                 <div className="text-5xl lg:text-6xl font-extrabold text-sky-400 tracking-tight mb-2">
-                  40%
+                  75%
                 </div>
                 <p className="text-slate-200 text-sm font-semibold leading-snug">
-                  Reduction in Processing Time
+                  Faster Grievance Resolution
                 </p>
               </div>
 
-              {/* Stat Card 2 */}
               <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-8 flex flex-col justify-center">
-                <div className="text-5xl lg:text-6xl font-extrabold text-emerald-400 tracking-tight mb-2">
-                  99.9%
+                <div className="text-5xl lg:text-6xl font-extrabold text-teal-400 tracking-tight mb-2">
+                  +32%
                 </div>
                 <p className="text-slate-200 text-sm font-semibold leading-snug">
-                  Accuracy in Code Mapping
+                  Increase in HCAHPS Satisfaction Scores
                 </p>
               </div>
             </div>
@@ -108,167 +106,150 @@ export function ClaimSyncDetail() {
         </div>
       </section>
 
-      {/* 3. Unmatched Precision, Unrivaled Speed */}
+      {/* 3. Key Capabilities */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1053] tracking-tight">
-              Unmatched Precision, Unrivaled Speed
+              Intelligent Feedback Processing
             </h2>
             <p className="mt-4 text-base md:text-lg text-slate-600">
-              Leveraging proprietary AI to bridge the gap between providers and payers instantly.
+              Empowering patient advocates and clinical quality leaders with automated triage tools.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-300 flex flex-col items-start">
-              <div className="w-14 h-14 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-6">
-                <ShieldCheck className="h-7 w-7" />
+              <div className="w-14 h-14 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6">
+                <Sparkles className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Real-time Eligibility Verification
+                AI Sentiment & Priority Scoring
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Instantly confirm patient coverage and benefits at the point of care, reducing downstream denials by up to 60%.
+                Automatically categorize feedback by severity, clinical risk, and urgency to prioritize critical patient concerns instantly.
               </p>
             </div>
 
-            {/* Feature 2 */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-300 flex flex-col items-start">
               <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6">
-                <Wand2 className="h-7 w-7" />
+                <MessageSquareHeart className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Automated Denial Management
+                Omnichannel Feedback Capture
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                AI identifies root causes for denials and automatically generates appeals, recovering revenue that would otherwise be lost.
+                Collect patient responses across SMS, patient portals, QR kiosks, and direct ombudsman hotline calls in one dashboard.
               </p>
             </div>
 
-            {/* Feature 3 */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-300 flex flex-col items-start">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
-                <ArrowRightLeft className="h-7 w-7" />
+              <div className="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6">
+                <HeartHandshake className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Seamless Payer Integration
+                Closed-Loop Resolution Workflows
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Direct electronic connections to thousands of payers via modern APIs and legacy clearinghouse protocols.
+                Assign accountability to department heads with strict SLA tracking, ensuring zero patient complaints fall through the cracks.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Built for the Modern Healthcare Stack */}
+      {/* 4. Standards & Compliance */}
       <section className="py-20 md:py-24 bg-slate-50/70 border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            
-            {/* Left Column */}
             <div className="flex-1 flex flex-col items-start">
               <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1053] tracking-tight mb-4">
-                Built for the Modern Healthcare Stack
+                Regulatory Compliance Built-In
               </h2>
               <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
-                Claim Sync is architected on FHIR standards to ensure near-zero latency communication between your EHR and the billing infrastructure. Fully HIPAA compliant and enterprise-grade.
+                Fully aligned with CMS, Joint Commission, and HIPAA guidelines for formal patient grievance management and reporting.
               </p>
 
-              {/* Compliance Badges */}
               <div className="flex flex-wrap items-center gap-8 text-slate-600">
                 <div className="flex flex-col items-center gap-2">
                   <Network className="h-6 w-6 text-slate-700" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">HL7 v2/v3</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">CMS Standards</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                   <Boxes className="h-6 w-6 text-slate-700" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">FHIR R4</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Joint Comm.</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                   <Shield className="h-6 w-6 text-slate-700" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">HITRUST</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">HIPAA Secure</span>
                 </div>
               </div>
             </div>
 
-            {/* Right 2x2 EHR Cards */}
             <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center hover:border-slate-300 transition-all">
-                <h4 className="text-2xl font-extrabold text-slate-900">Epic</h4>
-                <p className="text-xs font-medium text-slate-500 mt-1">Native Integration</p>
+              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center">
+                <h4 className="text-2xl font-extrabold text-slate-900">HCAHPS</h4>
+                <p className="text-xs font-medium text-slate-500 mt-1">Survey Integration</p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center hover:border-slate-300 transition-all">
-                <h4 className="text-2xl font-extrabold text-slate-900">Cerner</h4>
-                <p className="text-xs font-medium text-slate-500 mt-1">Certified Partner</p>
+              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center">
+                <h4 className="text-2xl font-extrabold text-slate-900">Patient Relations</h4>
+                <p className="text-xs font-medium text-slate-500 mt-1">Advocate Portal</p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center hover:border-slate-300 transition-all">
-                <h4 className="text-2xl font-extrabold text-slate-900">MEDITECH</h4>
-                <p className="text-xs font-medium text-slate-500 mt-1">API Hub Connect</p>
+              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center">
+                <h4 className="text-2xl font-extrabold text-slate-900">SLA Tracking</h4>
+                <p className="text-xs font-medium text-slate-500 mt-1">Automated Alerts</p>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center hover:border-slate-300 transition-all">
-                <h4 className="text-2xl font-extrabold text-slate-900">Athena</h4>
-                <p className="text-xs font-medium text-slate-500 mt-1">Real-time Feed</p>
+              <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col items-center justify-center text-center">
+                <h4 className="text-2xl font-extrabold text-slate-900">Audit Logs</h4>
+                <p className="text-xs font-medium text-slate-500 mt-1">Immutable Trail</p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* 5. Testimonial Quote Section */}
+      {/* 5. Testimonial */}
       <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-          {/* Avatar and yellow highlight tag */}
           <div className="flex flex-col items-center mb-6 relative">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md mb-2 bg-slate-100">
               <Image
                 src={userImg}
-                alt="Dr. Sarah Chen"
+                alt="Patient Relations Director"
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="bg-amber-300 text-slate-900 font-bold px-3 py-1 text-xs rounded-md shadow-sm">
-              Medhavi Gupta
+            <span className="bg-sky-300 text-slate-900 font-bold px-3 py-1 text-xs rounded-md shadow-sm">
+              Anita Sharma
             </span>
           </div>
 
-          {/* Quote Text */}
           <blockquote className="max-w-4xl text-xl sm:text-2xl md:text-3xl font-bold text-[#1A1053] leading-snug italic mb-6">
-            &ldquo;Implementing Claim Sync was a turning point for our revenue cycle operations. We saw an immediate 25% uplift in first-pass clean claims and significantly reduced our administrative overhead.&rdquo;
+            &ldquo;Complaint Management transformed how we listen to our patients. Grievance resolution time dropped from 14 days to under 48 hours, significantly boosting patient satisfaction.&rdquo;
           </blockquote>
 
-          {/* Author Details */}
           <div>
-            <div className="text-lg font-bold text-[#1A1053]">
-              Dr. Sarah Chen
-            </div>
+            <div className="text-lg font-bold text-[#1A1053]">Anita Sharma</div>
             <div className="text-xs font-semibold tracking-widest text-slate-500 uppercase mt-1">
-              CHIEF FINANCIAL OFFICER, METROPOL REGIONAL MEDICAL CENTER
+              DIRECTOR OF PATIENT RELATIONS, APOLLO CARE SYSTEMS
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. CTA Card Banner Section */}
+      {/* 6. CTA Card Banner */}
       <section className="py-12 pb-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="bg-[#1A1053] rounded-[2.5rem] p-10 sm:p-14 md:p-16 text-center text-white relative overflow-hidden shadow-2xl max-w-6xl mx-auto">
-            {/* Background Blob decoration */}
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-600/30 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl pointer-events-none" />
-
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-                Ready to optimize your claims?
+                Ready to elevate patient satisfaction?
               </h2>
               <p className="text-indigo-200 text-base md:text-lg mb-8 leading-relaxed">
-                Connect with our enterprise specialists to see how Claim Sync fits into your existing ecosystem.
+                Experience how automated complaint resolution streamlines patient care and compliance.
               </p>
               <Link 
                 href="/demo"

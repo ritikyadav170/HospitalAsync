@@ -1,4 +1,5 @@
 import { Globe, Share2, AtSign, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -53,9 +54,9 @@ export function Footer() {
           {/* Legal Links */}
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-[#1A1053] text-sm tracking-wider uppercase mb-2">Legal</h4>
-            <a href="#" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Privacy Policy</a>
+            <Link href="/privacy" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Privacy Policy</Link>
             <a href="#" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Compliance</a>
-            <a href="#" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Terms of Service</a>
+            <Link href="/terms" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">Terms of Service</Link>
             <a href="#" className="text-sm text-slate-500 hover:text-blue-600 transition-colors">HIPAA Statement</a>
           </div>
 

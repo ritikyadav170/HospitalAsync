@@ -1,4 +1,6 @@
 import { Heart, Rocket, Globe2, Users2 } from "lucide-react";
+import Image from "next/image";
+import career2 from "@/assets/images/career2.png";
 
 export function CareersCulture() {
   return (
@@ -38,8 +40,8 @@ export function CareersCulture() {
           <div className="lg:col-span-2 relative rounded-[2rem] overflow-hidden group">
             <div className="absolute inset-0 bg-slate-900/40 mix-blend-multiply z-10"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-[#1A1053]/90 via-transparent to-transparent z-10"></div>
-            <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+            <Image
+              src={career2}
               alt="Health technology team working together"
               className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px] transition-transform duration-700 group-hover:scale-105"
             />

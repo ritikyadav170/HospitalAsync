@@ -13,19 +13,19 @@ export function SolutionsSection() {
       icon: <Stethoscope className="h-8 w-8 text-sky-500" />,
       title: "Complaint Management",
       desc: "Transform patient feedback into actionable quality improvements.",
-      href: "/solutions"
+      href: "/solutions/complaint-management"
     },
     {
       icon: <Microscope className="h-8 w-8 text-sky-500" />,
       title: "Incident Management",
       desc: "Automated billing and reporting.",
-      href: "/solutions"
+      href: "/solutions/incident-management"
     },
     {
       icon: <PackagePlus className="h-8 w-8 text-sky-500" />,
       title: "Asset Management",
       desc: "Basic care and inventory optimization.",
-      href: "/solutions"
+      href: "/solutions/asset-management"
     }
   ];
 
@@ -54,15 +54,15 @@ export function SolutionsSection() {
               </div>
               <h3 className="text-xl font-bold text-center text-[#1A1053] mb-3">{card.title}</h3>
               <p className="text-center text-slate-500 mb-8 flex-grow">{card.desc}</p>
-              
+
               <div className="flex gap-3 w-full">
-                <Link 
+                <Link
                   href={card.href}
                   className="flex-1 py-2.5 text-center rounded-full border border-slate-200 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
                 >
                   View More
                 </Link>
-                <Link 
+                <Link
                   href="/demo"
                   className="flex-1 py-2.5 text-center rounded-full bg-[#1A1053] text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 transition-colors"
                 >

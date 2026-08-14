@@ -26,11 +26,21 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
-            <button className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1A1053] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-900/20 hover:bg-[#1A1053]/90 transition-all">
-              Explore Platform
-              <ArrowRight className="h-4 w-4" />
-            </button>
-            <Link 
+            {/* <Link
+              href="/solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1A1053] hover:bg-[#1A1053]/90 text-white px-8 py-3.5 text-sm font-semibold shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-gray-50 transition-all"
+            >
+              Explore Solutions
+              <ArrowRight className="ml-2 text-white" />
+            </Link> */}
+            <Link
+              href="/solutions"
+              className="inline-flex items-center justify-center rounded-full bg-[#1A1053] hover:bg-[] text-white px-8 py-3.5 text-sm font-semibold shadow-sm ring-1 ring-inset ring-gray-200 transition-all"
+            >
+              Explore Solutions
+              <ArrowRight className="ml-2 text-white" />
+            </Link>
+            <Link
               href="/demo"
               className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#1A1053] shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-gray-50 transition-all"
             >

@@ -5,7 +5,7 @@ import image5 from "@/assets/images/image5.png";
 
 export function DevicesSection() {
   return (
-    <section className="pt-12 pb-0 bg-slate-50 relative overflow-hidden">
+    <section className="pt-16 pb-20 md:pb-28 bg-slate-50 relative overflow-hidden">
       {/* Subtle Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
 
@@ -25,7 +25,7 @@ export function DevicesSection() {
         </div>
 
         {/* Feature Badges */}
-        <div className="flex flex-wrap justify-center items-center gap-5 text-xs font-semibold text-slate-600">
+        <div className="flex flex-wrap justify-center items-center gap-5 text-xs font-semibold text-slate-600 mb-10">
           <span className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm">
             <Monitor className="h-3.5 w-3.5 text-blue-600" /> Desktop Dashboard
           </span>
@@ -68,9 +68,6 @@ export function DevicesSection() {
 
         </div>
       </div>
-
-      {/* Dark bottom bar to anchor the design */}
-      <div className="w-full h-8 bg-[#1A1053] mt-[-8px] relative z-20" />
     </section>
   );
 }
