@@ -1,4 +1,4 @@
-import { ArrowRight, HeartHandshake, MessageSquareHeart, ShieldAlert, Sparkles, Network, Boxes, Shield } from "lucide-react";
+import { ArrowRight, HeartHandshake, MessageSquareHeart, Sparkles, Network, Boxes, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import solution2 from "@/assets/images/solution2.png";
@@ -11,7 +11,7 @@ export function ComplaintManagementDetail() {
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-sky-50/20 to-white pt-12 md:pt-16 pb-20">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            
+
             {/* Left Content */}
             <div className="flex-1 flex flex-col items-start gap-6">
               <div className="inline-flex items-center gap-2 rounded-full bg-sky-50 px-4 py-1.5 text-xs font-semibold text-sky-700 border border-sky-200/60 shadow-sm">
@@ -28,7 +28,7 @@ export function ComplaintManagementDetail() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2 w-full sm:w-auto">
-                <Link 
+                <Link
                   href="/demo"
                   className="inline-flex items-center justify-center rounded-full bg-[#1A1053] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-900/20 hover:bg-[#1A1053]/90 transition-all"
                 >
@@ -70,7 +70,7 @@ export function ComplaintManagementDetail() {
       <section className="bg-[#1A1053] py-16 md:py-20 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            
+
             {/* Left Description */}
             <div className="flex-1 max-w-xl">
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">
@@ -251,7 +251,7 @@ export function ComplaintManagementDetail() {
               <p className="text-indigo-200 text-base md:text-lg mb-8 leading-relaxed">
                 Experience how automated complaint resolution streamlines patient care and compliance.
               </p>
-              <Link 
+              <Link
                 href="/demo"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-bold text-[#1A1053] shadow-lg hover:bg-slate-100 transition-all hover:scale-105"
               >

@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldAlert, Cpu, AlertTriangle, FileCheck, Network, Boxes, Shield } from "lucide-react";
+import { ArrowRight, Cpu, AlertTriangle, FileCheck, Network, Boxes, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import solution3 from "@/assets/images/solution3.png";
