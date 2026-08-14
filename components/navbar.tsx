@@ -15,7 +15,7 @@ export function Navbar() {
             <Shield className="h-6 w-6" />
           </div>
           <span className="text-2xl font-bold tracking-tight text-slate-900">
-            Health<span className="text-teal-500">Sync</span>
+            Health<span className="text-teal-500"> Sync</span>
           </span>
         </div>
 

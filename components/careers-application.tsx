@@ -2,10 +2,10 @@ import { CheckCircle2 } from "lucide-react";
 
 export function CareersApplication() {
   return (
-    <section id="general-app" className="py-24 bg-white">
+    <section id="general-app" className="py-18 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-6xl">
         <div className="flex flex-col lg:flex-row bg-[#f8fafc] rounded-[2.5rem] overflow-hidden border border-slate-100">
-          
+
           {/* Left Side */}
           <div className="w-full lg:w-1/2 p-10 md:p-16 flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#1A1053] mb-6">Your Journey Starts Here</h2>
@@ -13,7 +13,7 @@ export function CareersApplication() {
               Our application process is designed to be as fluid as our data models. Tell us about your background and what excites you about the future of health technology.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-2">
               <div className="flex gap-4">
                 <div className="shrink-0 mt-1">
                   <CheckCircle2 className="h-6 w-6 text-teal-600 fill-teal-100" />
@@ -38,7 +38,7 @@ export function CareersApplication() {
           {/* Right Side - Form */}
           <div className="w-full lg:w-1/2 p-10 md:p-16 bg-white shadow-xl shadow-slate-200/20 lg:rounded-l-[2.5rem] border-l border-slate-100">
             <h3 className="text-2xl font-bold text-[#1A1053] mb-8">Quick Apply</h3>
-            
+
             <form className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-6">
                 <div className="flex-1 space-y-2">

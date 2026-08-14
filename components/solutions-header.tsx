@@ -2,7 +2,7 @@
 
 export function SolutionsHeader() {
   return (
-    <section className="pt-32 pb-16 bg-white relative overflow-hidden">
+    <section className="pt-20 pb-16 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
         <div className="inline-flex items-center justify-center rounded-full bg-indigo-50 px-4 py-1.5 text-xs font-bold tracking-widest text-[#1A1053] uppercase mb-8">
           Product Ecosystem

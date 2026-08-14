@@ -1,64 +1,101 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Sparkles, Building2 } from "lucide-react";
 import Image from "next/image";
 import career1 from "@/assets/images/career1.png";
 
 export function CareersHero() {
   return (
-    <section className="pt-32 pb-24 bg-white text-center">
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-        <div className="inline-flex items-center justify-center rounded-full bg-cyan-100/50 px-4 py-1.5 text-xs font-bold tracking-widest text-[#1A1053] uppercase mb-8">
-          Join the Mission
+    <section className="pt-20 pb-20 md:pb-28 bg-gradient-to-b from-slate-50/80 via-sky-50/20 to-white text-center relative overflow-hidden">
+      {/* Background Soft Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-cyan-100/40 blur-[120px] rounded-full -z-10 pointer-events-none" />
+
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
+
+        {/* Header Badge & Title */}
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <div className="inline-flex items-center gap-2 rounded-full bg-cyan-100/70 px-4 py-1.5 text-xs font-bold text-teal-900 border border-cyan-200/80 shadow-sm mb-6 uppercase tracking-widest">
+            <Sparkles className="h-3.5 w-3.5 text-teal-700" />
+            Join the Mission
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1053] leading-[1.12] tracking-tight mb-6">
+            Help us synchronize the future of global healthcare.
+          </h1>
+
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10">
+            We&apos;re building the infrastructure for the next generation of medical innovation. Join a team of visionaries dedicated to making health data fluid, secure, and life-saving.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#openings"
+              className="rounded-full bg-[#1A1053] px-8 py-3.5 text-sm font-semibold text-white shadow-xl shadow-indigo-950/20 hover:bg-[#1A1053]/90 hover:-translate-y-0.5 transition-all flex items-center gap-2"
+            >
+              View Openings <ArrowDown className="h-4 w-4" />
+            </a>
+            <a
+              href="#culture"
+              className="rounded-full bg-white border border-slate-200/80 px-8 py-3.5 text-sm font-semibold text-[#1A1053] shadow-sm hover:bg-slate-50 transition-all"
+            >
+              Our Culture
+            </a>
+          </div>
         </div>
 
-        <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-bold text-[#1A1053] leading-[1.1] mb-6">
-          Help us synchronize the future of global healthcare.
-        </h1>
+        {/* Hero Visual Grid with Matching Heights & Alignments */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch text-left mt-14">
 
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-12">
-          We're building the infrastructure for the next generation of medical
-          innovation. Join a team of visionaries dedicated to making health data
-          fluid, secure, and life-saving.
-        </p>
-
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <button className="rounded-full bg-[#1A1053] px-8 py-3.5 text-[15px] font-semibold text-white shadow-xl shadow-indigo-900/20 hover:bg-[#1A1053]/90 transition-all flex items-center gap-2">
-            View Openings <ArrowDown className="h-4 w-4" />
-          </button>
-          <button className="rounded-full bg-white border border-slate-200 px-8 py-3.5 text-[15px] font-semibold text-[#1A1053] shadow-sm hover:border-slate-300 transition-all">
-            Our Culture
-          </button>
-        </div>
-
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1.4fr_0.9fr] items-start">
-          <div className="rounded-[2rem] overflow-hidden border border-slate-200 shadow-2xl shadow-slate-200/20">
+          {/* Left Card (Span 7) - Collaborative Health Innovation */}
+          <div className="lg:col-span-7 bg-white rounded-[2.5rem] overflow-hidden border border-slate-200/80 shadow-xl shadow-slate-200/40 flex flex-col justify-between h-[380px] sm:h-[420px] relative group">
             <Image
               src={career1}
               alt="Healthcare technology team collaborating"
-              className="w-full h-80 object-cover"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
-            <div className="bg-white px-6 py-6 text-left">
-              <h3 className="text-xl font-semibold text-[#1A1053] mb-2">
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1053]/95 via-[#1A1053]/30 to-transparent z-10" />
+
+            <div className="absolute bottom-0 left-0 p-8 sm:p-10 z-20 max-w-xl text-white">
+              <span className="bg-white/20 backdrop-blur-md text-white font-bold text-xs px-3.5 py-1.5 rounded-full border border-white/30 uppercase tracking-wider mb-3 inline-block">
+                Clinical + Engineering
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
                 Collaborative Health Innovation
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Our teams partner across clinical, engineering, and product to
-                build secure healthcare solutions.
+              <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+                Our teams partner across clinical medicine, data engineering, and product design to build secure, life-critical healthcare solutions.
               </p>
             </div>
           </div>
 
-          <div className="rounded-[2rem] bg-slate-950/95 p-8 text-white shadow-2xl shadow-slate-900/20">
-            <p className="text-sm uppercase tracking-[0.35em] text-cyan-200 mb-4">
-              We are hiring
-            </p>
-            <p className="text-lg leading-relaxed">
-              Join a team where every feature, every integration, and every care
-              pathway is designed to help providers move faster and patients
-              feel safer.
-            </p>
+          {/* Right Card (Span 5) - We Are Hiring */}
+          <div className="lg:col-span-5 bg-[#1A1053] rounded-[2.5rem] p-8 sm:p-10 text-white shadow-xl shadow-indigo-950/20 flex flex-col justify-between h-[380px] sm:h-[420px] relative overflow-hidden">
+            {/* Background Glow */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 flex items-center justify-center mb-6 shadow-sm">
+                <Building2 className="h-7 w-7" />
+              </div>
+              <span className="text-xs uppercase tracking-[0.3em] font-extrabold text-cyan-300 mb-3 block">
+                WE ARE HIRING
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4 leading-snug">
+                Shape the Next Chapter of Healthcare
+              </h3>
+              <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+                Join a team where every feature, every integration, and every care pathway is designed to help providers move faster and patients feel safer.
+              </p>
+            </div>
+
+            <div className="pt-6 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-cyan-300 uppercase tracking-wider">
+              <span>Global Remote Roles</span>
+              <span>Competitive Benefits</span>
+            </div>
           </div>
+
         </div>
+
       </div>
     </section>
   );
