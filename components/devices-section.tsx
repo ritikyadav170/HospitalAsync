@@ -202,7 +202,7 @@ export function DevicesSection() {
             : "opacity-0 translate-y-12"
             }`}
         >
-          <div className="relative flex items-end justify-center h-[320px] sm:h-[400px] md:h-[480px] lg:h-[520px]">
+          <div className="relative flex justify-center">
             {/* Desktop Monitor */}
             <div className="relative w-[82%] sm:w-[72%] md:w-[68%] lg:w-[62%] z-10">
               {/* Monitor Frame */}
