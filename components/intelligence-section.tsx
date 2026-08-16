@@ -250,7 +250,7 @@ export function IntelligenceSection() {
               : "opacity-0 translate-x-10"
               }`}
           >
-            <div className="relative">
+            <div className="relative animate-float">
               {/* Decorative ring */}
               <div className="absolute -inset-6 bg-gradient-to-br from-[#1A1053]/5 via-transparent to-sky-100/20 rounded-[2.5rem] blur-2xl" />
 

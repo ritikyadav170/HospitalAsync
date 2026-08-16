@@ -193,8 +193,7 @@ export function HeroSection() {
           {/* Right Image */}
           <div className={`relative flex-[1.05] w-full max-w-xl lg:max-w-none lg:-mt-31 xl:-mt-40 transition-all duration-1000 delay-300 ease-out xl:ml-6 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
-
-            <div className="relative">
+            <div className="relative animate-float">
               {/* Decorative ring behind image */}
               <div className="absolute -inset-4 bg-gradient-to-br from-[#1A1053]/5 to-transparent rounded-[2rem] blur-xl" />
 

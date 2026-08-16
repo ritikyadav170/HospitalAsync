@@ -202,7 +202,7 @@ export function DevicesSection() {
             : "opacity-0 translate-y-12"
             }`}
         >
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center animate-float">
             {/* Desktop Monitor */}
             <div className="relative w-[82%] sm:w-[72%] md:w-[68%] lg:w-[62%] z-10">
               {/* Monitor Frame */}
@@ -233,7 +233,7 @@ export function DevicesSection() {
             </div>
 
             {/* Mobile Phone - Overlapping */}
-            <div className="absolute right-[2%] sm:right-[6%] md:right-[10%] lg:right-[14%] bottom-0 w-[24%] sm:w-[20%] md:w-[18%] lg:w-[16%] z-20">
+            <div className="absolute right-[2%] sm:right-[6%] md:right-[10%] lg:right-[14%] bottom-0 w-[24%] sm:w-[20%] md:w-[18%] lg:w-[16%] z-20 animate-float-delayed">
               {/* Phone Frame */}
               <div className="relative rounded-[1.5rem] sm:rounded-[2rem] bg-[#1e293b] p-1 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)]">
                 {/* Phone inner */}
