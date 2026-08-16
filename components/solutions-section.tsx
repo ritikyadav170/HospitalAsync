@@ -6,25 +6,25 @@ export function SolutionsSection() {
     {
       icon: <UserRound className="h-8 w-8 text-sky-500" />,
       title: "Claim Sync",
-      desc: "Automate and streamline your claims lifecycle.",
+      desc: "Automate e-claim conversion, validation, submission, and resubmission to improve accuracy and accelerate reimbursement.",
       href: "/solutions/claim-sync"
     },
     {
       icon: <Stethoscope className="h-8 w-8 text-sky-500" />,
       title: "Complaint Management",
-      desc: "Transform patient feedback into actionable quality improvements.",
+      desc: "Manage claims efficiently with intelligent validation, data conversion, tracking, and actionable insights that help reduce rejections and delays.",
       href: "/solutions/complaint-management"
     },
     {
       icon: <Microscope className="h-8 w-8 text-sky-500" />,
       title: "Incident Management",
-      desc: "Automated billing and reporting.",
+      desc: "Support providers with intelligent clinical insights, data-driven recommendations, and tools that enhance decision-making and care quality.",
       href: "/solutions/incident-management"
     },
     {
       icon: <PackagePlus className="h-8 w-8 text-sky-500" />,
       title: "Asset Management",
-      desc: "Basic care and inventory optimization.",
+      desc: "Improve the management of medical assets, equipment, and inventory with greater visibility, control, and operational efficiency.",
       href: "/solutions/asset-management"
     }
   ];
@@ -37,10 +37,10 @@ export function SolutionsSection() {
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1053]">
-            Solutions for Every Stakeholder
+            Solutions for Every Healthcare Stakeholder
           </h2>
           <p className="mt-6 text-lg text-slate-600">
-            Our modular platform scales to meet the unique needs of the entire healthcare lifecycle.
+           Our integrated platform delivers intelligent solutions that simplify healthcare operations, improve claims efficiency, and support better outcomes across the entire healthcare ecosystem.
           </p>
         </div>
 

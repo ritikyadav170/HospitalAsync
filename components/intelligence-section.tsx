@@ -15,11 +15,11 @@ export function IntelligenceSection() {
           <div className="flex-1 flex flex-col items-start gap-8">
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1053] leading-tight">
-                Intelligence that<br />Empowers Care
+             Smart Healthcare <br/>Intelligence
               </h2>
               <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-                Our proprietary AI Assistant, SyncMind, works alongside clinicians to synthesize petabytes of medical data into actionable insights.
-              </p>
+                HealthSync connects critical workflows from e-claim conversion and validation to revenue cycle management, clinical decision support, and operational insights. With intelligent automation and data-driven solutions, HealthSync helps healthcare organizations reduce manual effort, improve accuracy, accelerate processing, and make better-informed decisions.
+               </p>
             </div>
 
             <div className="flex flex-col gap-6 w-full">
@@ -29,10 +29,10 @@ export function IntelligenceSection() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
                     <QrCode className="h-5 w-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#1A1053]">Swift Check-in</h3>
+                  <h3 className="text-lg font-bold text-[#1A1053]">End-to-End Efficiency</h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  QR-based arrival and triage systems reduce waiting room friction by up to 60%.
+                 From e-prior authorizations to e-claims, adjudication, and resubmissions, HealthSync supports your healthcare organization throughout the complete claims cycle. 
                 </p>
               </div>
               
@@ -42,10 +42,21 @@ export function IntelligenceSection() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
                     <Stethoscope className="h-5 w-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#1A1053]">Clinical Copilot</h3>
+                  <h3 className="text-lg font-bold text-[#1A1053]">Accurate & Reliable Claims</h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  Real-time prescription interaction alerts and automated charting assistants.
+                 Validate claims data before submission, identify errors and missing information, and improve first-pass acceptance with intelligent validation and conversion
+                </p>
+              </div>
+                 <div className="rounded-3xl bg-slate-50 p-6 md:p-8 border border-slate-100/50 hover:bg-indigo-50/50 transition-colors">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
+                    <Stethoscope className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#1A1053]">Actionable Insights</h3>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  Gain clear visibility into your claims performance. Track trends, identify potential issues, and use actionable insights to reduce denials and improve revenue cycle efficiency.
                 </p>
               </div>
             </div>
