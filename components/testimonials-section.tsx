@@ -3,11 +3,26 @@ import Image from "next/image";
 import userImg from "@/assets/images/user.jpg";
 
 export function TestimonialsSection() {
-  const testimonials = Array(3).fill({
-    quote: '"HealthSync transformed our state-wide health network. We\'ve seen a 30% reduction in patient wait times and significant improvements in data accuracy."',
-    author: "Dr. Elena Rodriguez",
-    role: "Chief Information Officer, St. Jude's Network",
-  });
+  const testimonials = [
+    {
+      quote:
+        '"HealthSync has helped us streamline our e-claim processes from data conversion and validation through submission. The reduction in manual work has made our claims operations significantly more efficient."',
+      author: "Dr. Elena Rodriguez",
+      role: "Chief Information Officer, St. Jude's Network",
+    },
+    {
+      quote:
+        '"The validation capabilities have made a real difference to our claims process. We can identify data issues before submission, helping our team improve claim accuracy and reduce avoidable rework."',
+      author: "Michael Thompson",
+      role: "Director of Revenue Cycle, Mercy Health System",
+    },
+    {
+      quote:
+        '"HealthSync gives our team greater visibility across claims and operational workflows. Having actionable data and insights in one platform helps us respond faster and make better-informed decisions."',
+      author: "Priya Shah",
+      role: "VP of Clinical Operations, North Valley Medical Group",
+    },
+  ];
 
   return (
     <section className="py-24 bg-slate-50">
