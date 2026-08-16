@@ -9,25 +9,25 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-xl shadow-sm">
-      <div className="container mx-auto flex h-28 sm:h-32 md:h-36 items-center justify-between px-6 lg:px-12 max-w-7xl">
+    <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-[#f3f4fb]/95 backdrop-blur-xl shadow-sm">
+      <div className="container mx-auto flex h-[84px] items-center justify-between px-6 max-w-7xl lg:px-12">
 
-        {/* Brand Logo - Extra Large & Ultra Prominent */}
-        <Link href="/" className="flex items-center group transition-transform hover:scale-[1.02] py-2 justify-start">
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center justify-start py-1 transition-transform duration-200 hover:scale-[1.02]">
           <Image
             src={finalLogo}
             alt="HealthSync Logo"
-            className="h-18 sm:h-18 md:h-20 lg:h-24 w-auto max-w-[300px] sm:max-w-[380px] md:max-w-[440px] object-contain"
+            className="h-10 w-auto max-w-[240px] object-contain sm:h-11 md:h-12 lg:h-[54px]"
             priority
           />
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden items-center gap-10 lg:flex">
+        <div className="hidden items-center gap-7 lg:flex xl:gap-9">
           <Link
             href="/"
-            className={`text-[16px] transition-colors ${pathname === '/'
-              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-1.5'
+            className={`text-[15px] transition-colors ${pathname === '/'
+              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-2'
               : 'font-medium text-slate-600 hover:text-[#1A1053]'
               }`}
           >
@@ -35,8 +35,8 @@ export function Navbar() {
           </Link>
           <Link
             href="/solutions"
-            className={`text-[16px] transition-colors ${pathname === '/solutions' || pathname.startsWith('/solutions/')
-              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-1.5'
+            className={`text-[15px] transition-colors ${pathname === '/solutions' || pathname.startsWith('/solutions/')
+              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-2'
               : 'font-medium text-slate-600 hover:text-[#1A1053]'
               }`}
           >
@@ -44,8 +44,8 @@ export function Navbar() {
           </Link>
           <Link
             href="/infrastructure"
-            className={`text-[16px] transition-colors ${pathname === '/infrastructure'
-              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-1.5'
+            className={`text-[15px] transition-colors ${pathname === '/infrastructure'
+              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-2'
               : 'font-medium text-slate-600 hover:text-[#1A1053]'
               }`}
           >
@@ -53,8 +53,8 @@ export function Navbar() {
           </Link>
           <Link
             href="/about"
-            className={`text-[16px] transition-colors ${pathname === '/about'
-              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-1.5'
+            className={`text-[15px] transition-colors ${pathname === '/about'
+              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-2'
               : 'font-medium text-slate-600 hover:text-[#1A1053]'
               }`}
           >
@@ -62,8 +62,8 @@ export function Navbar() {
           </Link>
           <Link
             href="/careers"
-            className={`text-[16px] transition-colors ${pathname === '/careers'
-              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-1.5'
+            className={`text-[15px] transition-colors ${pathname === '/careers'
+              ? 'font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-2'
               : 'font-medium text-slate-600 hover:text-[#1A1053]'
               }`}
           >
@@ -75,7 +75,7 @@ export function Navbar() {
         <div className="flex items-center gap-8">
           <Link
             href="/demo"
-            className="rounded-full bg-[#1A1053] px-8 py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-indigo-900/20 hover:bg-[#1A1053]/90 hover:-translate-y-0.5 transition-all"
+            className="inline-flex h-[52px] w-[182px] items-center justify-center rounded-full bg-[#1A1053] px-5 text-[15px] font-semibold text-white shadow-[0_12px_25px_rgba(26,16,83,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1A1053]/95"
           >
             Request Demo
           </Link>
