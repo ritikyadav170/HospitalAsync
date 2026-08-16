@@ -138,7 +138,7 @@ export function Navbar() {
           <Image
             src={finalLogo}
             alt="HealthSync Logo"
-            className="h-11 w-auto object-contain sm:h-12 md:h-14 lg:h-[68px]"
+            className="h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-[100px]"
             priority
           />
         </Link>

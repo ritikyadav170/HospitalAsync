@@ -35,7 +35,8 @@ export function SolutionsGrid() {
       image: solution1,
       color: "text-teal-600",
       href: "/solutions/claim-sync",
-      delay: "delay-100"
+      delay: "delay-100",
+      isLaunched: true
     },
     {
       title: "Complaint Management",
@@ -44,7 +45,8 @@ export function SolutionsGrid() {
       image: solution2,
       color: "text-blue-600",
       href: "/solutions",
-      delay: "delay-200"
+      delay: "delay-200",
+      isLaunched: false
     },
     {
       title: "Incident Management",
@@ -53,7 +55,8 @@ export function SolutionsGrid() {
       image: solution3,
       color: "text-red-500",
       href: "/solutions",
-      delay: "delay-300"
+      delay: "delay-300",
+      isLaunched: false
     },
     {
       title: "Asset Management",
@@ -62,7 +65,8 @@ export function SolutionsGrid() {
       image: solution4,
       color: "text-indigo-600",
       href: "/solutions",
-      delay: "delay-400"
+      delay: "delay-400",
+      isLaunched: false
     }
   ];
 
@@ -96,12 +100,18 @@ export function SolutionsGrid() {
                 </p>
 
                 <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100">
-                  <Link 
-                    href={feat.href}
-                    className="flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors"
-                  >
-                    View More <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  {feat.isLaunched ? (
+                    <Link 
+                      href={feat.href}
+                      className="flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors"
+                    >
+                      View More <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  ) : (
+                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest cursor-default">
+                      Coming Soon
+                    </div>
+                  )}
                   <Link 
                     href="/demo"
                     className="rounded-full bg-[#1A1053] px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 hover:scale-105 transition-all duration-300"
