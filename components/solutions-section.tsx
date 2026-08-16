@@ -39,7 +39,7 @@ export function SolutionsSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1053]">
             Solutions for Every Healthcare Stakeholder
           </h2>
-          <p className="mt-6 text-lg text-slate-600">
+          <p className="mt-6 text-lg text-slate-600 text-justify md:text-center">
            Our integrated platform delivers intelligent solutions that simplify healthcare operations, improve claims efficiency, and support better outcomes across the entire healthcare ecosystem.
           </p>
         </div>

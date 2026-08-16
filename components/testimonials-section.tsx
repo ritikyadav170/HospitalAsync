@@ -44,7 +44,7 @@ export function TestimonialsSection() {
                 <Star className="h-5 w-5 fill-current" />
               </div>
               
-              <p className="text-slate-600 italic leading-relaxed flex-grow mb-8 font-medium">
+              <p className="text-slate-600 italic leading-relaxed flex-grow mb-8 font-medium text-justify md:text-left">
                 {item.quote}
               </p>
               

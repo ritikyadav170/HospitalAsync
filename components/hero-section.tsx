@@ -21,7 +21,7 @@ export function HeroSection() {
             Healthcare Intelligence For Hospitals & Doctors
           </h1>
 
-          <p className="max-w-[600px] text-[1.125rem] text-slate-600 leading-[1.75]">
+          <p className="max-w-[600px] text-[1.125rem] text-slate-600 leading-[1.75] text-justify md:text-left">
             HealthSync is an intelligent healthcare platform designed to empower hospitals and doctors with data-driven insights
           </p>
 

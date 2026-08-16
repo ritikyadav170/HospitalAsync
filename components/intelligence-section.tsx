@@ -17,7 +17,7 @@ export function IntelligenceSection() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1053] leading-tight">
              Smart Healthcare <br/>Intelligence
               </h2>
-              <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+              <p className="mt-6 text-lg text-slate-600 leading-relaxed text-justify md:text-left">
                 HealthSync connects critical workflows from e-claim conversion and validation to revenue cycle management, clinical decision support, and operational insights. With intelligent automation and data-driven solutions, HealthSync helps healthcare organizations reduce manual effort, improve accuracy, accelerate processing, and make better-informed decisions.
                </p>
             </div>
@@ -31,7 +31,7 @@ export function IntelligenceSection() {
                   </div>
                   <h3 className="text-lg font-bold text-[#1A1053]">End-to-End Efficiency</h3>
                 </div>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed text-justify md:text-left">
                  From e-prior authorizations to e-claims, adjudication, and resubmissions, HealthSync supports your healthcare organization throughout the complete claims cycle. 
                 </p>
               </div>
@@ -44,7 +44,7 @@ export function IntelligenceSection() {
                   </div>
                   <h3 className="text-lg font-bold text-[#1A1053]">Accurate & Reliable Claims</h3>
                 </div>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed text-justify md:text-left">
                  Validate claims data before submission, identify errors and missing information, and improve first-pass acceptance with intelligent validation and conversion
                 </p>
               </div>
@@ -55,7 +55,7 @@ export function IntelligenceSection() {
                   </div>
                   <h3 className="text-lg font-bold text-[#1A1053]">Actionable Insights</h3>
                 </div>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed text-justify md:text-left">
                   Gain clear visibility into your claims performance. Track trends, identify potential issues, and use actionable insights to reduce denials and improve revenue cycle efficiency.
                 </p>
               </div>

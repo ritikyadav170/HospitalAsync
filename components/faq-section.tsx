@@ -62,7 +62,7 @@ export function FaqSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 text-justify md:text-center">
             Everything you need to know about HealthSync integration, compliance, and deployment.
           </p>
         </div>

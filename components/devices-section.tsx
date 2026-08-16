@@ -19,7 +19,7 @@ export function DevicesSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight">
             Built for Every Healthcare Workflow
           </h2>
-          <p className="mt-2 text-base md:text-lg text-slate-600 max-w-xl mx-auto">
+          <p className="mt-2 text-base md:text-lg text-slate-600 max-w-xl mx-auto text-justify md:text-center">
            Seamless, high-performance access to HealthSync across the platforms your healthcare teams use every day. Get a centralized view of claims, revenue cycle activity, validation results, and operational performance from one intuitive dashboard. Whether you’re a provider, payer, administrator, or healthcare authority, HealthSync delivers consistent access to the information and tools you need anytime, anywhere
           </p>
         </div>
