@@ -153,7 +153,7 @@ export function SolutionsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#f8f9fc] py-12 md:py-16 lg:py-20"
+      className="relative overflow-hidden bg-[#f8f9fc] py-8 md:py-12 lg:py-16"
     >
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none">

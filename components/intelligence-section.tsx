@@ -142,7 +142,7 @@ export function IntelligenceSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-white py-12 md:py-16 lg:py-20"
+      className="relative overflow-hidden bg-white py-8 md:py-12 lg:py-16"
     >
       {/* Premium background */}
       <div className="absolute inset-0 pointer-events-none">
