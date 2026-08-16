@@ -1,19 +1,29 @@
+"use client";
+
 import { ArrowDown, Sparkles, Building2 } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import career1 from "@/assets/images/career1.png";
 
 export function CareersHero() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <section className="pt-20 pb-20 md:pb-28 bg-gradient-to-b from-slate-50/80 via-sky-50/20 to-white text-center relative overflow-hidden">
+    <section ref={sectionRef} className="pt-20 pb-20 md:pb-28 bg-gradient-to-b from-slate-50/80 via-sky-50/20 to-white text-center relative overflow-hidden">
       {/* Background Soft Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-cyan-100/40 blur-[120px] rounded-full -z-10 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-cyan-100/40 blur-[120px] rounded-full -z-10 pointer-events-none animate-pulse" style={{ animationDuration: '6s' }} />
 
       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
 
         {/* Header Badge & Title */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-cyan-100/70 px-4 py-1.5 text-xs font-bold text-teal-900 border border-cyan-200/80 shadow-sm mb-6 uppercase tracking-widest">
-            <Sparkles className="h-3.5 w-3.5 text-teal-700" />
+        <div className={`max-w-3xl mx-auto text-center mb-12 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="inline-flex items-center gap-2 rounded-full bg-cyan-100/70 px-4 py-1.5 text-xs font-bold text-teal-900 border border-cyan-200/80 shadow-sm mb-6 uppercase tracking-widest transition-transform hover:scale-105 cursor-default">
+            <Sparkles className="h-3.5 w-3.5 text-teal-700 animate-pulse" />
             Join the Mission
           </div>
 
@@ -28,13 +38,13 @@ export function CareersHero() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href="#openings"
-              className="rounded-full bg-[#1A1053] px-8 py-3.5 text-sm font-semibold text-white shadow-xl shadow-indigo-950/20 hover:bg-[#1A1053]/90 hover:-translate-y-0.5 transition-all flex items-center gap-2"
+              className="rounded-full bg-[#1A1053] px-8 py-3.5 text-sm font-semibold text-white shadow-xl shadow-indigo-950/20 hover:bg-[#1A1053]/90 hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
             >
-              View Openings <ArrowDown className="h-4 w-4" />
+              View Openings <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
             </a>
             <a
               href="#culture"
-              className="rounded-full bg-white border border-slate-200/80 px-8 py-3.5 text-sm font-semibold text-[#1A1053] shadow-sm hover:bg-slate-50 transition-all"
+              className="rounded-full bg-white border border-slate-200/80 px-8 py-3.5 text-sm font-semibold text-[#1A1053] shadow-sm hover:bg-slate-50 hover:scale-105 transition-all duration-300"
             >
               Our Culture
             </a>
@@ -45,11 +55,11 @@ export function CareersHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch text-left mt-14">
 
           {/* Left Card (Span 7) - Collaborative Health Innovation */}
-          <div className="lg:col-span-7 bg-white rounded-[2.5rem] overflow-hidden border border-slate-200/80 shadow-xl shadow-slate-200/40 flex flex-col justify-between h-[380px] sm:h-[420px] relative group">
+          <div className={`lg:col-span-7 bg-white rounded-[2.5rem] overflow-hidden border border-slate-200/80 shadow-xl shadow-slate-200/40 flex flex-col justify-between h-[380px] sm:h-[420px] relative group transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <Image
               src={career1}
               alt="Healthcare technology team collaborating"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 animate-float"
               priority
             />
             {/* Gradient Overlay */}
@@ -69,18 +79,18 @@ export function CareersHero() {
           </div>
 
           {/* Right Card (Span 5) - We Are Hiring */}
-          <div className="lg:col-span-5 bg-[#1A1053] rounded-[2.5rem] p-8 sm:p-10 text-white shadow-xl shadow-indigo-950/20 flex flex-col justify-between h-[380px] sm:h-[420px] relative overflow-hidden">
+          <div className={`lg:col-span-5 bg-[#1A1053] rounded-[2.5rem] p-8 sm:p-10 text-white shadow-xl shadow-indigo-950/20 flex flex-col justify-between h-[380px] sm:h-[420px] relative overflow-hidden transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} hover:shadow-2xl hover:shadow-indigo-900/40 group`}>
             {/* Background Glow */}
-            <div className="absolute -top-20 -right-20 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none animate-pulse" />
 
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 flex items-center justify-center mb-6 shadow-sm">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500">
                 <Building2 className="h-7 w-7" />
               </div>
               <span className="text-xs uppercase tracking-[0.3em] font-extrabold text-cyan-300 mb-3 block">
                 WE ARE HIRING
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4 leading-snug">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4 leading-snug group-hover:text-cyan-100 transition-colors">
                 Shape the Next Chapter of Healthcare
               </h3>
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">

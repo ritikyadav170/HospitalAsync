@@ -1,6 +1,9 @@
+"use client";
+
 import { Zap, ShieldCheck, Heart, Share2, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 import aboutHero from "@/assets/images/about-hero.png";
 import aboutCeo from "@/assets/images/about-ceo.png";
@@ -8,16 +11,37 @@ import aboutCto from "@/assets/images/about-cto.png";
 import aboutCfo from "@/assets/images/about-cfo.png";
 
 export function AboutSection() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-12");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="w-full bg-white font-sans">
+    <div className="w-full bg-white font-sans overflow-hidden">
       {/* 1. Hero Header Section */}
-      <section className="relative w-full h-[520px] sm:h-[600px] md:h-[650px] overflow-hidden flex items-center">
+      <section className="relative w-full h-[520px] sm:h-[600px] md:h-[650px] overflow-hidden flex items-center animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         {/* Background AI Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 animate-float" style={{ animationDuration: '10s' }}>
           <Image
             src={aboutHero}
             alt="HealthSync Modern Facility"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
             priority
           />
           {/* Dark Blue Gradient Overlay matching screenshot */}
@@ -27,8 +51,8 @@ export function AboutSection() {
         {/* Hero Content */}
         <div className="container mx-auto px-6 lg:px-12 relative z-20 text-white max-w-7xl">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/80 border border-slate-700 px-3.5 py-1 text-[11px] font-semibold tracking-wider text-slate-200 uppercase mb-6 shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-sky-400" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/80 border border-slate-700 px-3.5 py-1 text-[11px] font-semibold tracking-wider text-slate-200 uppercase mb-6 shadow-sm transition-transform hover:scale-105 cursor-default">
+              <span className="h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
               ESTABLISHED 2018
             </div>
 
@@ -44,7 +68,7 @@ export function AboutSection() {
       </section>
 
       {/* 2. Mission Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
@@ -60,32 +84,32 @@ export function AboutSection() {
 
             {/* Right Content Paragraphs & Stats */}
             <div className="lg:col-span-7 flex flex-col gap-6 text-slate-600 leading-relaxed text-base sm:text-lg">
-              <p>
+              <p className="hover:text-slate-800 transition-colors">
                 In an era of fragmented data and siloed systems, HealthSync was founded on a singular premise: that the flow of information should never be a barrier to the quality of care. We believe that clinical data, when orchestrated with precision and security, becomes the most powerful tool in the physician&apos;s arsenal.
               </p>
 
               <hr className="border-slate-100 my-2" />
 
-              <p className="text-slate-600">
+              <p className="text-slate-600 hover:text-slate-800 transition-colors">
                 Our platform doesn&apos;t just store records; it builds a living ecosystem where interoperability is the default, not the exception. By integrating advanced machine learning with rigorous HIPAA-compliant infrastructure, we provide healthcare systems with the clarity they need to make life-saving decisions in real-time.
               </p>
 
               {/* Stats Below Mission */}
               <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100 mt-4">
-                <div>
-                  <div className="text-4xl sm:text-5xl font-extrabold text-[#1A1053] tracking-tight">
+                <div className="group">
+                  <div className="text-4xl sm:text-5xl font-extrabold text-[#1A1053] tracking-tight group-hover:scale-110 transition-transform origin-left">
                     99.9%
                   </div>
-                  <div className="text-xs font-bold tracking-widest text-slate-500 uppercase mt-2">
+                  <div className="text-xs font-bold tracking-widest text-slate-500 uppercase mt-2 group-hover:text-teal-600 transition-colors">
                     UPTIME RELIABILITY
                   </div>
                 </div>
 
-                <div className="border-l border-slate-200 pl-8">
-                  <div className="text-4xl sm:text-5xl font-extrabold text-[#1A1053] tracking-tight">
+                <div className="border-l border-slate-200 pl-8 group">
+                  <div className="text-4xl sm:text-5xl font-extrabold text-[#1A1053] tracking-tight group-hover:scale-110 transition-transform origin-left">
                     Zero
                   </div>
-                  <div className="text-xs font-bold tracking-widest text-slate-500 uppercase mt-2">
+                  <div className="text-xs font-bold tracking-widest text-slate-500 uppercase mt-2 group-hover:text-teal-600 transition-colors">
                     DATA BREACHES
                   </div>
                 </div>
@@ -98,15 +122,17 @@ export function AboutSection() {
       </section>
 
       {/* 3. Dark Blue Stats Banner */}
-      <section className="bg-[#1A1053] py-16 text-white">
-        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+      <section className="bg-[#1A1053] py-16 text-white relative animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+        {/* Subtle Glow */}
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-500/10 animate-pulse pointer-events-none" style={{ animationDuration: '4s' }} />
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
 
-            <div className="flex flex-col items-start justify-center pt-4 md:pt-0">
+            <div className="flex flex-col items-start justify-center pt-4 md:pt-0 group">
               <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
                 GLOBAL REACH
               </span>
-              <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white">
+              <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white group-hover:scale-110 transition-transform origin-left">
                 500+
               </div>
               <span className="text-sm font-medium text-slate-300 mt-1">
@@ -114,11 +140,11 @@ export function AboutSection() {
               </span>
             </div>
 
-            <div className="flex flex-col items-start justify-center pt-6 md:pt-0 md:pl-8">
+            <div className="flex flex-col items-start justify-center pt-6 md:pt-0 md:pl-8 group">
               <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
                 VOLUME
               </span>
-              <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white">
+              <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white group-hover:scale-110 transition-transform origin-left">
                 1.2M
               </div>
               <span className="text-sm font-medium text-slate-300 mt-1">
@@ -126,11 +152,11 @@ export function AboutSection() {
               </span>
             </div>
 
-            <div className="flex flex-col items-start justify-center pt-6 md:pt-0 md:pl-8">
+            <div className="flex flex-col items-start justify-center pt-6 md:pt-0 md:pl-8 group">
               <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
                 EFFICIENCY
               </span>
-              <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white">
+              <div className="text-4xl sm:text-5xl font-serif font-extrabold text-white group-hover:scale-110 transition-transform origin-left">
                 40%
               </div>
               <span className="text-sm font-medium text-slate-300 mt-1">
@@ -143,7 +169,7 @@ export function AboutSection() {
       </section>
 
       {/* 4. Core Values Section */}
-      <section className="py-24 bg-[#f0f6fa]">
+      <section className="py-24 bg-[#f0f6fa] animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-extrabold tracking-widest text-sky-600 uppercase mb-3 block">
@@ -156,9 +182,9 @@ export function AboutSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1: Innovation */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6">
-                <Zap className="h-6 w-6" />
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <Zap className="h-6 w-6 group-hover:scale-110 transition-transform" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">Innovation</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -167,9 +193,9 @@ export function AboutSection() {
             </div>
 
             {/* Card 2: Security */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6">
-                <ShieldCheck className="h-6 w-6" />
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <ShieldCheck className="h-6 w-6 group-hover:scale-110 transition-transform" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">Security</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -178,9 +204,9 @@ export function AboutSection() {
             </div>
 
             {/* Card 3: Compassion */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6">
-                <Heart className="h-6 w-6" />
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <Heart className="h-6 w-6 group-hover:scale-110 transition-transform" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">Compassion</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -189,9 +215,9 @@ export function AboutSection() {
             </div>
 
             {/* Card 4: Scalability */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6">
-                <Share2 className="h-6 w-6" />
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <Share2 className="h-6 w-6 group-hover:scale-110 transition-transform" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">Scalability</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -203,7 +229,7 @@ export function AboutSection() {
       </section>
 
       {/* 5. Leadership Section */}
-      <section className="py-24 bg-[#f0f6fa]">
+      <section className="py-24 bg-[#f0f6fa] animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
@@ -220,27 +246,27 @@ export function AboutSection() {
 
             <Link
               href="/careers"
-              className="inline-flex items-center gap-2 rounded-full border border-[#1A1053] px-6 py-2.5 text-sm font-semibold text-[#1A1053] hover:bg-[#1A1053] hover:text-white transition-colors shrink-0"
+              className="inline-flex items-center gap-2 rounded-full border border-[#1A1053] px-6 py-2.5 text-sm font-semibold text-[#1A1053] hover:bg-[#1A1053] hover:text-white hover:scale-105 transition-all duration-300 shrink-0 group"
             >
               View Full Team
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Leader 1: Dr. Elena Rodriguez */}
-            <div className="flex flex-col">
+            {/* Leader 1 */}
+            <div className="flex flex-col group cursor-pointer">
               <div className="relative rounded-3xl overflow-hidden mb-6 aspect-[4/4] bg-slate-200 shadow-md">
                 <Image
                   src={aboutCeo}
                   alt="Dr. Elena Rodriguez"
-                  className="w-full h-full object-cover grayscale contrast-125"
+                  className="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                 />
-                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider">
+                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider group-hover:bg-indigo-600 transition-colors">
                   CEO
                 </span>
               </div>
-              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2">
+              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2 group-hover:text-indigo-600 transition-colors">
                 Dr. Elena Rodriguez
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -248,19 +274,19 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Leader 2: Marcus Thorne */}
-            <div className="flex flex-col">
+            {/* Leader 2 */}
+            <div className="flex flex-col group cursor-pointer">
               <div className="relative rounded-3xl overflow-hidden mb-6 aspect-[4/4] bg-slate-200 shadow-md">
                 <Image
                   src={aboutCto}
                   alt="Marcus Thorne"
-                  className="w-full h-full object-cover grayscale contrast-125"
+                  className="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                 />
-                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider">
+                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider group-hover:bg-indigo-600 transition-colors">
                   CTO
                 </span>
               </div>
-              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2">
+              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2 group-hover:text-indigo-600 transition-colors">
                 Marcus Thorne
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -268,19 +294,19 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Leader 3: Sarah Chen */}
-            <div className="flex flex-col">
+            {/* Leader 3 */}
+            <div className="flex flex-col group cursor-pointer">
               <div className="relative rounded-3xl overflow-hidden mb-6 aspect-[4/4] bg-slate-200 shadow-md">
                 <Image
                   src={aboutCfo}
                   alt="Sarah Chen"
-                  className="w-full h-full object-cover grayscale contrast-125"
+                  className="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                 />
-                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider">
+                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider group-hover:bg-indigo-600 transition-colors">
                   CFO
                 </span>
               </div>
-              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2">
+              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2 group-hover:text-indigo-600 transition-colors">
                 Sarah Chen
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -292,7 +318,7 @@ export function AboutSection() {
       </section>
 
       {/* 6. Call to Action Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-[#f0f6fa] via-sky-50/40 to-slate-100 border-t border-slate-100">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-[#f0f6fa] via-sky-50/40 to-slate-100 border-t border-slate-100 animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         <div className="container mx-auto px-6 lg:px-12 text-center max-w-4xl">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight mb-8">
             Ready to synchronize your medical enterprise?
@@ -301,13 +327,13 @@ export function AboutSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="w-full sm:w-auto rounded-full bg-[#1A1053] px-9 py-4 text-sm font-semibold text-white shadow-xl shadow-indigo-950/20 hover:bg-[#1A1053]/90 transition-all"
+              className="w-full sm:w-auto rounded-full bg-[#1A1053] px-9 py-4 text-sm font-semibold text-white shadow-xl shadow-indigo-950/20 hover:bg-[#1A1053]/90 hover:scale-105 transition-all duration-300"
             >
               Request System Audit
             </Link>
             <Link
               href="/infrastructure"
-              className="w-full sm:w-auto rounded-full bg-transparent border border-[#1A1053] px-9 py-4 text-sm font-semibold text-[#1A1053] hover:bg-slate-50 transition-all"
+              className="w-full sm:w-auto rounded-full bg-white border border-[#1A1053] px-9 py-4 text-sm font-semibold text-[#1A1053] hover:bg-slate-50 hover:scale-105 transition-all duration-300"
             >
               Contact Global Hubs
             </Link>

@@ -70,7 +70,7 @@
 
 "use client";
 
-import { Star, Quote, Users } from "lucide-react";
+import { Star, Users } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import userImg from "@/assets/images/user.jpg";
