@@ -119,7 +119,7 @@ export function DevicesSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#f8f9fc] py-16 md:py-20 lg:py-28"
+      className="relative overflow-hidden bg-[#f8f9fc] py-12 md:py-16 lg:py-20"
     >
       {/* Premium background */}
       <div className="absolute inset-0 pointer-events-none">

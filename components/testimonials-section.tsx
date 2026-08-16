@@ -117,7 +117,7 @@ export function TestimonialsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#f8f9fc] py-16 md:py-20 lg:py-28"
+      className="relative overflow-hidden bg-[#f8f9fc] py-12 md:py-16 lg:py-20"
     >
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">

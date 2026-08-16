@@ -99,7 +99,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#f8f9fc] pt-18 pb-24 md:pt-24 md:pb-32 lg:pt-10 lg:pb-36"
+      className="relative overflow-hidden bg-[#f8f9fc] pt-18 pb-8 md:pt-24 md:pb-12 lg:pt-10 lg:pb-12"
     >
       {/* Premium animated background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

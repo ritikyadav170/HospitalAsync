@@ -134,7 +134,7 @@ export function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#1A1053] py-16 md:py-20 lg:py-24"
+      className="relative overflow-hidden bg-[#1A1053] py-12 md:py-16 lg:py-20"
     >
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
