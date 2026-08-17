@@ -16,11 +16,11 @@ import {
   ShieldOff
 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 export function PrivacySection() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  // const [isVisible, setIsVisible] = useState(false);
+  // const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -304,7 +304,7 @@ export function PrivacySection() {
             <div id="sec-6" className="bg-[#1A1053] rounded-3xl p-8 sm:p-12 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out hover:shadow-indigo-900/30 group">
               {/* Background Shield Faint Icon */}
               <Shield className="absolute -right-10 -bottom-10 h-64 w-64 text-white/5 pointer-events-none stroke-[1] group-hover:scale-110 transition-transform duration-700" />
-              
+
               {/* Animated Glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none animate-pulse" />
 

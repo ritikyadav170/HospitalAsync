@@ -3,12 +3,12 @@
 import { ShieldCheck, Shield, Sparkles, CheckCircle2, Download, HelpCircle, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import termsIp from "@/assets/images/terms-ip.png";
 
 export function TermsSection() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  // const [isVisible, setIsVisible] = useState(false);
+  // const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -182,7 +182,7 @@ export function TermsSection() {
             {/* 3. Intellectual Property Section */}
             <div id="sec-3" className="bg-[#1A1053] rounded-3xl p-8 sm:p-10 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out hover:shadow-indigo-900/40 group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none group-hover:bg-indigo-500/30 transition-colors duration-700" />
-              
+
               <div className="flex-1 space-y-4 z-10">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                   3. Intellectual Property

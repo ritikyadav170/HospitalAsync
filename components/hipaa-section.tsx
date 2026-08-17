@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { MapPin, Mail, Phone, ShieldCheck, ArrowRight, Send, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,8 +10,8 @@ import { toast } from "sonner";
 
 export function HipaaSection() {
   const [inquiryType, setInquiryType] = useState("Sales Inquiry");
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  // const [isVisible, setIsVisible] = useState(false);
+  // const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,7 +43,7 @@ export function HipaaSection() {
   return (
     <div className="w-full bg-slate-50/30 font-sans text-slate-900 py-12 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
-        
+
         {/* Main Hero Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 ease-out">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1053] tracking-tight leading-[1.15] mb-4">
@@ -56,7 +56,7 @@ export function HipaaSection() {
 
         {/* 2 Columns Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-24">
-          
+
           {/* Left Form Box Card */}
           <div className="lg:col-span-7 bg-white border border-slate-100 rounded-[2.5rem] p-8 sm:p-10 shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-slate-200/60 transition-shadow duration-500 animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 delay-100 ease-out">
             {/* Top Switch Pills */}
@@ -64,22 +64,20 @@ export function HipaaSection() {
               <button
                 type="button"
                 onClick={() => setInquiryType("Sales Inquiry")}
-                className={`px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 ${
-                  inquiryType === "Sales Inquiry"
+                className={`px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 ${inquiryType === "Sales Inquiry"
                     ? "bg-[#1A1053] text-white shadow-md scale-105"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 Sales Inquiry
               </button>
               <button
                 type="button"
                 onClick={() => setInquiryType("Technical Support")}
-                className={`px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 ${
-                  inquiryType === "Technical Support"
+                className={`px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 ${inquiryType === "Technical Support"
                     ? "bg-[#1A1053] text-white shadow-md scale-105"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 Technical Support
               </button>
@@ -176,11 +174,11 @@ export function HipaaSection() {
 
           {/* Right Info Column */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* Dubai Headquarters Card */}
             <div className="bg-[#1A1053] text-white rounded-[2.5rem] p-8 shadow-xl relative overflow-hidden group animate-on-scroll opacity-0 translate-y-8 transition-all duration-1000 delay-200 ease-out hover:shadow-indigo-900/40">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-blue-500/20 transition-colors duration-500" />
-              
+
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2A2B66] text-cyan-400 mb-6 group-hover:scale-110 group-hover:bg-cyan-400 group-hover:text-[#2A2B66] transition-all duration-300">
                 <MapPin className="h-6 w-6" />
               </div>
