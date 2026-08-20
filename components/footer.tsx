@@ -649,17 +649,25 @@ import { useState } from "react";
 import finalLogo from "@/assets/images/final_logo.png";
 
 const productLinks = [
-  { label: "Hospital ERP", href: "/solutions/claim-sync" },
-  { label: "Lab LIMS", href: "/solutions/complaint-management" },
-  { label: "Patient App", href: "/solutions/incident-management" },
-  { label: "AI Assistant", href: "/solutions/asset-management" },
+  // { label: "Hospital ERP", href: "/solutions/claim-sync" },
+  // { label: "Lab LIMS", href: "/solutions/complaint-management" },
+  // { label: "Patient App", href: "/solutions/incident-management" },
+  // { label: "AI Assistant", href: "/solutions/asset-management" },
+  { label: "ClaimSync", href: "/solutions/claim-sync" },
+  { label: "Complaint Management", href: "/solutions/complaint-management" },
+  { label: "Incident Management", href: "/solutions/incident-management" },
+  { label: "Asset Management", href: "/solutions/asset-management" },
 ];
 
 const resourceLinks = [
-  { label: "API Documentation", href: "/infrastructure" },
-  { label: "Security Portal", href: "/compliance" },
-  { label: "Case Studies", href: "/about" },
-  { label: "Support Hub", href: "/hipaa" },
+  // { label: "API Documentation", href: "/infrastructure" },
+  // { label: "Security Portal", href: "/compliance" },
+  // { label: "Case Studies", href: "/about" },
+  // { label: "Support Hub", href: "/hipaa" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const legalLinks = [
@@ -767,8 +775,8 @@ export function Footer() {
                 <button
                   type="submit"
                   className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-bold transition-all active:scale-95 ${subscribed
-                      ? "bg-emerald-500 text-white"
-                      : "bg-white text-[#1A1053] hover:bg-white/90"
+                    ? "bg-emerald-500 text-white"
+                    : "bg-white text-[#1A1053] hover:bg-white/90"
                     }`}
                 >
                   {subscribed ? (

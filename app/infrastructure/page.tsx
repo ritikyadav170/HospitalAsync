@@ -7,6 +7,8 @@ import { TestimonialsSection } from "@/components/testimonials-section";
 import { Footer } from "@/components/footer";
 
 export default function InfrastructurePage() {
+  return null;
+  /*
   return (
     <main className="min-h-screen bg-white font-sans text-slate-900 selection:bg-indigo-200 flex flex-col">
       <Navbar />
@@ -20,4 +22,5 @@ export default function InfrastructurePage() {
       <Footer />
     </main>
   );
+  */
 }

@@ -11,9 +11,9 @@ export default function CareersPage() {
       <Navbar />
       <div className="flex-grow">
         <CareersHero />
-        <CareersCulture />
+        {/* <CareersCulture /> */}
         <CareersJobs />
-        <CareersApplication />
+        {/* <CareersApplication /> */}
       </div>
       <Footer />
     </main>

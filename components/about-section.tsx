@@ -53,15 +53,15 @@ export function AboutSection() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/80 border border-slate-700 px-3.5 py-1 text-[11px] font-semibold tracking-wider text-slate-200 uppercase mb-6 shadow-sm transition-transform hover:scale-105 cursor-default">
               <span className="h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
-              ESTABLISHED 2018
+              ESTABLISHED 2026
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-              The Future of Connected Healthcare
+              HealthSync: Building the Future of Healthcare
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl font-normal">
-              HealthSync is the architectural backbone of modern medicine, orchestrating global clinical data to empower providers and protect patients.
+              Healthcare is becoming more connected, data-driven, and technology-enabled. But for providers, payers, and healthcare organizations, connecting systems and information can still be complex.
             </p>
           </div>
         </div>
@@ -78,43 +78,26 @@ export function AboutSection() {
                 01. OUR MISSION
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] leading-tight tracking-tight">
-                Bridging clinical excellence with digital intelligence.
+                What We Believe
               </h2>
             </div>
 
-            {/* Right Content Paragraphs & Stats */}
+            {/* Right Content */}
             <div className="lg:col-span-7 flex flex-col gap-6 text-slate-600 leading-relaxed text-base sm:text-lg">
-              <p className="hover:text-slate-800 transition-colors">
-                In an era of fragmented data and siloed systems, HealthSync was founded on a singular premise: that the flow of information should never be a barrier to the quality of care. We believe that clinical data, when orchestrated with precision and security, becomes the most powerful tool in the physician&apos;s arsenal.
-              </p>
-
-              <hr className="border-slate-100 my-2" />
-
-              <p className="text-slate-600 hover:text-slate-800 transition-colors">
-                Our platform doesn&apos;t just store records; it builds a living ecosystem where interoperability is the default, not the exception. By integrating advanced machine learning with rigorous HIPAA-compliant infrastructure, we provide healthcare systems with the clarity they need to make life-saving decisions in real-time.
-              </p>
-
-              {/* Stats Below Mission */}
-              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100 mt-4">
-                <div className="group">
-                  <div className="text-4xl sm:text-5xl font-extrabold text-[#1A1053] tracking-tight group-hover:scale-110 transition-transform origin-left">
-                    99.9%
-                  </div>
-                  <div className="text-xs font-bold tracking-widest text-slate-500 uppercase mt-2 group-hover:text-teal-600 transition-colors">
-                    UPTIME RELIABILITY
-                  </div>
+              <div className="flex flex-col gap-6">
+                <div>
+                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">1) Technology Should Empower People:</span>
+                  <span>Technology should help healthcare professionals do their jobs better not make their jobs harder.</span>
                 </div>
-
-                <div className="border-l border-slate-200 pl-8 group">
-                  <div className="text-4xl sm:text-5xl font-extrabold text-[#1A1053] tracking-tight group-hover:scale-110 transition-transform origin-left">
-                    Zero
-                  </div>
-                  <div className="text-xs font-bold tracking-widest text-slate-500 uppercase mt-2 group-hover:text-teal-600 transition-colors">
-                    DATA BREACHES
-                  </div>
+                <div>
+                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">2) Data Should Create Value:</span>
+                  <span>Healthcare data is most powerful when the right information reaches the right people at the right time.</span>
+                </div>
+                <div>
+                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">3) Simplicity Is Powerful:</span>
+                  <span>Sophisticated technology should still feel intuitive to the people using it every day.</span>
                 </div>
               </div>
-
             </div>
 
           </div>
@@ -168,174 +151,55 @@ export function AboutSection() {
         </div>
       </section>
 
-      {/* 4. Core Values Section */}
-      <section className="py-24 bg-[#f0f6fa] animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+      {/* 4. Commitment Section */}
+      <section className="py-24 bg-white animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out border-t border-slate-100">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-extrabold tracking-widest text-sky-600 uppercase mb-3 block">
-              02. OUR CORE VALUES
-            </span>
+          <div className="mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight">
-              The Principles of Performance
+              Our Commitment
             </h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Card 1: Innovation */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                <Zap className="h-6 w-6 group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1A1053] mb-3">Innovation</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                Constantly pushing the boundaries of what&apos;s possible in health tech through rigorous R&D.
-              </p>
-            </div>
-
-            {/* Card 2: Security */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                <ShieldCheck className="h-6 w-6 group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1A1053] mb-3">Security</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                A foundational commitment to privacy, maintaining SOC2 Type II and HIPAA compliance at every layer.
-              </p>
-            </div>
-
-            {/* Card 3: Compassion */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                <Heart className="h-6 w-6 group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1A1053] mb-3">Compassion</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                Never forgetting that every data point represents a person seeking care and a better life.
-              </p>
-            </div>
-
-            {/* Card 4: Scalability */}
-            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 flex flex-col items-start hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                <Share2 className="h-6 w-6 group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-xl font-bold text-[#1A1053] mb-3">Scalability</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                Built for the future, ensuring our infrastructure grows as rapidly as the healthcare landscape.
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
-
-      {/* 5. Leadership Section */}
-      <section className="py-24 bg-[#f0f6fa] animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+        
+        <hr className="border-slate-200 mb-12 w-full" />
+        
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div>
-              <span className="text-xs font-extrabold tracking-widest text-sky-600 uppercase mb-3 block">
-                03. LEADERSHIP
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight mb-4">
-                The Visionaries
-              </h2>
-              <p className="text-slate-600 max-w-2xl text-base sm:text-lg">
-                A multidisciplinary team combining decades of clinical medicine, venture scale engineering, and global logistics.
+          <div className="max-w-4xl text-slate-700 leading-relaxed text-base sm:text-lg">
+            <h3 className="text-2xl font-bold text-[#1A1053] mb-6">
+              Secure. Responsible. Connected.
+            </h3>
+            <div className="flex flex-col gap-6">
+              <p>
+                Healthcare technology comes with a responsibility to protect sensitive information and support the organizations that depend on it.
               </p>
-            </div>
-
-            <Link
-              href="/careers"
-              className="inline-flex items-center gap-2 rounded-full border border-[#1A1053] px-6 py-2.5 text-sm font-semibold text-[#1A1053] hover:bg-[#1A1053] hover:text-white hover:scale-105 transition-all duration-300 shrink-0 group"
-            >
-              View Full Team
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Leader 1 */}
-            <div className="flex flex-col group cursor-pointer">
-              <div className="relative rounded-3xl overflow-hidden mb-6 aspect-[4/4] bg-slate-200 shadow-md">
-                <Image
-                  src={aboutCeo}
-                  alt="Dr. Elena Rodriguez"
-                  className="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-                />
-                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider group-hover:bg-indigo-600 transition-colors">
-                  CEO
-                </span>
-              </div>
-              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2 group-hover:text-indigo-600 transition-colors">
-                Dr. Elena Rodriguez
-              </h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                Former Chief of Informatics at Metro Health. Elena leads HealthSync with a focus on patient-centric data architecture and clinical integration.
+              <p>
+                HealthSync approaches technology development with security, controlled access, responsible data management, and operational reliability in mind.
               </p>
-            </div>
-
-            {/* Leader 2 */}
-            <div className="flex flex-col group cursor-pointer">
-              <div className="relative rounded-3xl overflow-hidden mb-6 aspect-[4/4] bg-slate-200 shadow-md">
-                <Image
-                  src={aboutCto}
-                  alt="Marcus Thorne"
-                  className="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-                />
-                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider group-hover:bg-indigo-600 transition-colors">
-                  CTO
-                </span>
-              </div>
-              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2 group-hover:text-indigo-600 transition-colors">
-                Marcus Thorne
-              </h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                Previously Lead Infrastructure Architect for global cloud providers. Marcus oversees our zero-trust security and data orchestration engine.
+              <p>
+                Our solutions are designed to help organizations build connected workflows without losing sight of the importance of trust, privacy, and accountability.
               </p>
-            </div>
-
-            {/* Leader 3 */}
-            <div className="flex flex-col group cursor-pointer">
-              <div className="relative rounded-3xl overflow-hidden mb-6 aspect-[4/4] bg-slate-200 shadow-md">
-                <Image
-                  src={aboutCfo}
-                  alt="Sarah Chen"
-                  className="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-                />
-                <span className="absolute bottom-4 left-4 bg-[#1A1053] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-md uppercase tracking-wider group-hover:bg-indigo-600 transition-colors">
-                  CFO
-                </span>
-              </div>
-              <h3 className="text-2xl font-extrabold text-[#1A1053] mb-2 group-hover:text-indigo-600 transition-colors">
-                Sarah Chen
-              </h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                A veteran of healthcare private equity and fintech. Sarah directs our global expansion and partnership strategy across six continents.
+              <p className="italic text-slate-500 mt-4">
+                Specific security, compliance, and regulatory controls depend on the applicable HealthSync solution, deployment architecture, and customer environment.
               </p>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* 6. Call to Action Section */}
       <section className="py-20 md:py-28 bg-gradient-to-b from-[#f0f6fa] via-sky-50/40 to-slate-100 border-t border-slate-100 animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         <div className="container mx-auto px-6 lg:px-12 text-center max-w-4xl">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight mb-8">
-            Ready to synchronize your medical enterprise?
+            Ready to Transform Your Healthcare Operations?
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/demo"
+              href="/contact"
               className="w-full sm:w-auto rounded-full bg-[#1A1053] px-9 py-4 text-sm font-semibold text-white shadow-xl shadow-indigo-950/20 hover:bg-[#1A1053]/90 hover:scale-105 transition-all duration-300"
             >
-              Request System Audit
-            </Link>
-            <Link
-              href="/infrastructure"
-              className="w-full sm:w-auto rounded-full bg-white border border-[#1A1053] px-9 py-4 text-sm font-semibold text-[#1A1053] hover:bg-slate-50 hover:scale-105 transition-all duration-300"
-            >
-              Contact Global Hubs
+              Contact Us
             </Link>
           </div>
         </div>

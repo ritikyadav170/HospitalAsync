@@ -101,7 +101,7 @@ import finalLogo from "@/assets/images/final_logo.png";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/infrastructure", label: "Global Infrastructure" },
+  // { href: "/infrastructure", label: "Global Infrastructure" },
   { href: "/about", label: "About Us" },
   { href: "/careers", label: "Careers" },
 ];
