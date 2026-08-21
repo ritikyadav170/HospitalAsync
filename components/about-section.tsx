@@ -22,7 +22,7 @@ export function AboutSection() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     document.querySelectorAll(".animate-on-scroll").forEach((el) => {
@@ -37,7 +37,10 @@ export function AboutSection() {
       {/* 1. Hero Header Section */}
       <section className="relative w-full h-[520px] sm:h-[600px] md:h-[650px] overflow-hidden flex items-center animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         {/* Background AI Image */}
-        <div className="absolute inset-0 z-0 animate-float" style={{ animationDuration: '10s' }}>
+        <div
+          className="absolute inset-0 z-0 animate-float"
+          style={{ animationDuration: "10s" }}
+        >
           <Image
             src={aboutHero}
             alt="HealthSync Modern Facility"
@@ -56,13 +59,19 @@ export function AboutSection() {
               ESTABLISHED 2026
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-              HealthSync: Building the Future of Healthcare
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-5">
+              The Future of Connected Healthcare
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl font-normal">
-            Healthcare is becoming more connected, data-driven, and technology-enabled. But for providers, payers, and healthcare organizations, connecting systems and information can still be complex.
+            <h2 className="text-xl sm:text-2xl font-semibold text-white leading-tight mb-4">
+              HealthSync: Building the Future of Healthcare
+            </h2>
 
+            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl font-normal">
+              Healthcare is becoming more connected, data-driven, and
+              technology-enabled. But for providers, payers, and healthcare
+              organizations, connecting systems and information can still be
+              complex.
             </p>
           </div>
         </div>
@@ -72,7 +81,6 @@ export function AboutSection() {
       <section className="py-20 md:py-28 bg-white animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-
             {/* Left Headline */}
             <div className="lg:col-span-5 flex flex-col items-start">
               <span className="text-xs font-extrabold tracking-widest text-sky-600 uppercase mb-4">
@@ -87,20 +95,34 @@ export function AboutSection() {
             <div className="lg:col-span-7 flex flex-col gap-6 text-slate-600 leading-relaxed text-base sm:text-lg">
               <div className="flex flex-col gap-6">
                 <div>
-                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">1) Technology Should Empower People:</span>
-                  <span>Technology should help healthcare professionals do their jobs better not make their jobs harder.</span>
+                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">
+                    1) Technology Should Empower People:
+                  </span>
+                  <span>
+                    Technology should help healthcare professionals do their
+                    jobs better not make their jobs harder.
+                  </span>
                 </div>
                 <div>
-                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">2) Data Should Create Value:</span>
-                  <span>Healthcare data is most powerful when the right information reaches the right people at the right time.</span>
+                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">
+                    2) Data Should Create Value:
+                  </span>
+                  <span>
+                    Healthcare data is most powerful when the right information
+                    reaches the right people at the right time.
+                  </span>
                 </div>
                 <div>
-                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">3) Simplicity Is Powerful:</span>
-                  <span>Sophisticated technology should still feel intuitive to the people using it every day.</span>
+                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">
+                    3) Simplicity Is Powerful:
+                  </span>
+                  <span>
+                    Sophisticated technology should still feel intuitive to the
+                    people using it every day.
+                  </span>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -108,10 +130,12 @@ export function AboutSection() {
       {/* 3. Dark Blue Stats Banner */}
       <section className="bg-[#1A1053] py-16 text-white relative animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         {/* Subtle Glow */}
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-500/10 animate-pulse pointer-events-none" style={{ animationDuration: '4s' }} />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-500/10 animate-pulse pointer-events-none"
+          style={{ animationDuration: "4s" }}
+        />
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
-
             <div className="flex flex-col items-start justify-center pt-4 md:pt-0 group">
               <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">
                 GLOBAL REACH
@@ -147,7 +171,6 @@ export function AboutSection() {
                 Reduction in Admin Latency
               </span>
             </div>
-
           </div>
         </div>
       </section>
@@ -174,7 +197,9 @@ export function AboutSection() {
                 Data Protection
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Healthcare technology comes with a responsibility to protect sensitive information and support the organizations that depend on it.
+                Healthcare technology comes with a responsibility to protect
+                sensitive information and support the organizations that depend
+                on it.
               </p>
             </div>
 
@@ -187,7 +212,9 @@ export function AboutSection() {
                 Security &amp; Access
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                HealthSync approaches technology development with security, controlled access, responsible data management, and operational reliability in mind.
+                HealthSync approaches technology development with security,
+                controlled access, responsible data management, and operational
+                reliability in mind.
               </p>
             </div>
 
@@ -200,7 +227,9 @@ export function AboutSection() {
                 Connected Workflows
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Our solutions are designed to help organizations build connected workflows without losing sight of the importance of trust, privacy, and accountability.
+                Our solutions are designed to help organizations build connected
+                workflows without losing sight of the importance of trust,
+                privacy, and accountability.
               </p>
             </div>
 
@@ -213,13 +242,14 @@ export function AboutSection() {
                 Regulatory Control
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Specific security, compliance, and regulatory controls depend on the applicable HealthSync solution, deployment architecture, and customer environment.
+                Specific security, compliance, and regulatory controls depend on
+                the applicable HealthSync solution, deployment architecture, and
+                customer environment.
               </p>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* 6. Call to Action Section */}
       <section className="py-20 md:py-28 bg-gradient-to-b from-[#f0f6fa] via-sky-50/40 to-slate-100 border-t border-slate-100 animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">

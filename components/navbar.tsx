@@ -85,11 +85,6 @@
 //   );
 // }
 
-
-
-
-
-
 "use client";
 
 import Link from "next/link";
@@ -124,10 +119,11 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
-        ? "border-b border-[#1A1053]/10 bg-[#f3f4fb]/90 backdrop-blur-2xl shadow-[0_4px_30px_rgba(26,16,83,0.08)]"
-        : "border-b border-transparent bg-[#f3f4fb]/70 backdrop-blur-xl"
-        }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
+          ? "border-b border-[#1A1053]/10 bg-[#f3f4fb]/90 backdrop-blur-2xl shadow-[0_4px_30px_rgba(26,16,83,0.08)]"
+          : "border-b border-transparent bg-[#f3f4fb]/70 backdrop-blur-xl"
+      }`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:h-[84px] lg:px-12">
         {/* Brand Logo */}
@@ -138,7 +134,7 @@ export function Navbar() {
           <Image
             src={finalLogo}
             alt="HealthSync Logo"
-            className="h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-[100px]"
+            className="h-[68px] w-auto object-contain sm:h-[76px] md:h-[84px] lg:h-[92px]"
             priority
           />
         </Link>
@@ -151,21 +147,24 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative px-4 py-2 text-[15px] tracking-wide transition-colors duration-200 ${active
-                  ? "font-bold text-[#1A1053]"
-                  : "font-medium text-slate-500 hover:text-[#1A1053]"
-                  }`}
+                className={`relative px-4 py-2 text-[15px] tracking-wide transition-colors duration-200 ${
+                  active
+                    ? "font-bold text-[#1A1053]"
+                    : "font-medium text-slate-500 hover:text-[#1A1053]"
+                }`}
               >
                 {link.label}
                 {/* Animated underline */}
                 <span
-                  className={`absolute bottom-0 left-1/2 h-[2.5px] -translate-x-1/2 rounded-full bg-[#1A1053] transition-all duration-300 ease-out ${active ? "w-[60%] opacity-100" : "w-0 opacity-0"
-                    }`}
+                  className={`absolute bottom-0 left-1/2 h-[2.5px] -translate-x-1/2 rounded-full bg-[#1A1053] transition-all duration-300 ease-out ${
+                    active ? "w-[60%] opacity-100" : "w-0 opacity-0"
+                  }`}
                 />
                 {/* Hover underline */}
                 <span
-                  className={`absolute bottom-0 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#1A1053]/30 transition-all duration-300 ease-out ${active ? "w-0" : "w-0 group-hover:w-[40%]"
-                    }`}
+                  className={`absolute bottom-0 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#1A1053]/30 transition-all duration-300 ease-out ${
+                    active ? "w-0" : "w-0 group-hover:w-[40%]"
+                  }`}
                 />
               </Link>
             );
@@ -188,16 +187,19 @@ export function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block h-[2px] w-6 rounded-full bg-[#1A1053] transition-all duration-300 ${isMobileMenuOpen ? "translate-y-[7px] rotate-45" : ""
-                }`}
+              className={`block h-[2px] w-6 rounded-full bg-[#1A1053] transition-all duration-300 ${
+                isMobileMenuOpen ? "translate-y-[7px] rotate-45" : ""
+              }`}
             />
             <span
-              className={`block h-[2px] rounded-full bg-[#1A1053] transition-all duration-300 ${isMobileMenuOpen ? "w-0 opacity-0" : "w-6 opacity-100"
-                }`}
+              className={`block h-[2px] rounded-full bg-[#1A1053] transition-all duration-300 ${
+                isMobileMenuOpen ? "w-0 opacity-0" : "w-6 opacity-100"
+              }`}
             />
             <span
-              className={`block h-[2px] w-6 rounded-full bg-[#1A1053] transition-all duration-300 ${isMobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""
-                }`}
+              className={`block h-[2px] w-6 rounded-full bg-[#1A1053] transition-all duration-300 ${
+                isMobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""
+              }`}
             />
           </button>
         </div>
@@ -205,8 +207,9 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`overflow-hidden transition-all duration-400 ease-in-out lg:hidden ${isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+        className={`overflow-hidden transition-all duration-400 ease-in-out lg:hidden ${
+          isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <div className="border-t border-[#1A1053]/8 bg-[#f3f4fb]/95 px-6 py-5 backdrop-blur-2xl">
           <div className="flex flex-col gap-1">
@@ -217,10 +220,11 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`rounded-xl px-4 py-3 text-[15px] transition-all duration-200 ${active
-                    ? "bg-[#1A1053]/8 font-bold text-[#1A1053]"
-                    : "font-medium text-slate-500 hover:bg-[#1A1053]/5 hover:text-[#1A1053]"
-                    }`}
+                  className={`rounded-xl px-4 py-3 text-[15px] transition-all duration-200 ${
+                    active
+                      ? "bg-[#1A1053]/8 font-bold text-[#1A1053]"
+                      : "font-medium text-slate-500 hover:bg-[#1A1053]/5 hover:text-[#1A1053]"
+                  }`}
                 >
                   {link.label}
                 </Link>
