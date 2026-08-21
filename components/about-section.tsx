@@ -61,7 +61,8 @@ export function AboutSection() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl font-normal">
-              Healthcare is becoming more connected, data-driven, and technology-enabled. But for providers, payers, and healthcare organizations, connecting systems and information can still be complex.
+            Healthcare is becoming more connected, data-driven, and technology-enabled. But for providers, payers, and healthcare organizations, connecting systems and information can still be complex.
+
             </p>
           </div>
         </div>
@@ -151,34 +152,67 @@ export function AboutSection() {
         </div>
       </section>
 
-      {/* 4. Commitment Section */}
-      <section className="py-24 bg-white animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out border-t border-slate-100">
+      {/* 4. Commitment Cards Section */}
+      <section className="py-20 md:py-28 bg-[#f5f8fc]/70 border-t border-slate-100 animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-          <div className="mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight">
-              Our Commitment
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-extrabold tracking-widest text-sky-600 uppercase mb-3 block">
+              02. OUR COMMITMENT
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] tracking-tight mb-4">
+              Secure. Responsible. Connected.
             </h2>
           </div>
-        </div>
-        
-        <hr className="border-slate-200 mb-12 w-full" />
-        
-        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-          <div className="max-w-4xl text-slate-700 leading-relaxed text-base sm:text-lg">
-            <h3 className="text-2xl font-bold text-[#1A1053] mb-6">
-              Secure. Responsible. Connected.
-            </h3>
-            <div className="flex flex-col gap-6">
-              <p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Card 1 */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-all duration-300 flex flex-col items-start text-left">
+              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-500 flex items-center justify-center mb-6">
+                <ShieldCheck className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1A1053] mb-3">
+                Data Protection
+              </h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
                 Healthcare technology comes with a responsibility to protect sensitive information and support the organizations that depend on it.
               </p>
-              <p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-all duration-300 flex flex-col items-start text-left">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-500 flex items-center justify-center mb-6">
+                <Zap className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1A1053] mb-3">
+                Security &amp; Access
+              </h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
                 HealthSync approaches technology development with security, controlled access, responsible data management, and operational reliability in mind.
               </p>
-              <p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-all duration-300 flex flex-col items-start text-left">
+              <div className="w-12 h-12 rounded-2xl bg-pink-50 text-pink-500 flex items-center justify-center mb-6">
+                <Heart className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1A1053] mb-3">
+                Connected Workflows
+              </h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
                 Our solutions are designed to help organizations build connected workflows without losing sight of the importance of trust, privacy, and accountability.
               </p>
-              <p className="italic text-slate-500 mt-4">
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl transition-all duration-300 flex flex-col items-start text-left">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-500 flex items-center justify-center mb-6">
+                <Share2 className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-[#1A1053] mb-3">
+                Regulatory Control
+              </h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
                 Specific security, compliance, and regulatory controls depend on the applicable HealthSync solution, deployment architecture, and customer environment.
               </p>
             </div>

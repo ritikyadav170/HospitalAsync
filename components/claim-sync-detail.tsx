@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, ShieldCheck, Wand2, ArrowRightLeft, Network, Boxes, Shield } from "lucide-react";
+import { ArrowRight, ShieldCheck, RefreshCw, Search, Network, Boxes, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import image4 from "@/assets/images/image4.png";
@@ -22,7 +22,7 @@ export function ClaimSyncDetail() {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
             {/* Left Content */}
-            <div 
+            <div
               className={`flex-[0.95] flex flex-col items-start gap-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
               <div className="inline-flex items-center gap-2 rounded-full bg-cyan-50 px-4 py-1.5 text-xs font-semibold text-teal-700 border border-cyan-200/60 shadow-sm">
@@ -49,7 +49,7 @@ export function ClaimSyncDetail() {
             </div>
 
             {/* Right Screen Visual */}
-            <div 
+            <div
               className={`relative flex-[1.05] w-full max-w-2xl lg:max-w-none transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
               <div className="relative animate-float">
@@ -85,11 +85,29 @@ export function ClaimSyncDetail() {
             {/* Left Description */}
             <div className="flex-1 max-w-xl">
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">
-                Best E-claim solution for clinics and pharmacies
+                Built for Healthcare Revenue Cycle Teams
               </h2>
-              <p className="text-slate-300 text-base md:text-lg leading-relaxed">
-                From creating a claim to receiving feedback, your team can manage the process with greater visibility and fewer manual steps.
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-6">
+                Claim Sync can support organizations that need a more structured approach to electronic claims management.
               </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-200 text-sm md:text-base font-medium">
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-sky-400" />
+                  Clinics &amp; Medical Centers
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-sky-400" />
+                  Hospitals &amp; Healthcare Networks
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-sky-400" />
+                  Doctors
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-sky-400" />
+                  Patients
+                </li>
+              </ul>
             </div>
 
             {/* Right Stat Cards */}
@@ -135,67 +153,38 @@ export function ClaimSyncDetail() {
             {/* Feature 1 */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-300 flex flex-col items-start">
               <div className="w-14 h-14 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-6">
-                <ShieldCheck className="h-7 w-7" />
+                <RefreshCw className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Real-time Eligibility Verification
+                Resubmission Workflow
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Instantly confirm patient coverage and benefits at the point of care, reducing downstream denials by up to 60%.
+                Rejected or returned claims don&apos;t have to disappear into a spreadsheet. Claim Sync helps teams identify claims requiring attention, correct the relevant information, and move them through the resubmission workflow.
               </p>
             </div>
 
             {/* Feature 2 */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-300 flex flex-col items-start">
               <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6">
-                <Wand2 className="h-7 w-7" />
+                <Search className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Automated Denial Management
+                Centralized Claim Search
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                AI identifies root causes for denials and automatically generates appeals, recovering revenue that would otherwise be lost.
+                Find the claim you need quickly. Search and filter claims using relevant information such as: Patient, Claim number, Authorization number and more. Spend less time looking for claims and more time resolving them.
               </p>
             </div>
 
             {/* Feature 3 */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/40 hover:shadow-2xl transition-all duration-300 flex flex-col items-start">
               <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
-                <ArrowRightLeft className="h-7 w-7" />
+                <ShieldCheck className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Seamless Payer Integration
-              </h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Direct electronic connections to thousands of payers via modern APIs and legacy clearinghouse protocols.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-16 flex flex-col gap-10 max-w-4xl mx-auto">
-            <div>
-              <h3 className="text-2xl font-bold text-[#1A1053] mb-3">
-                Resubmission Workflow
-              </h3>
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-                Rejected or returned claims don&apos;t have to disappear into a spreadsheet. Claim Sync helps teams identify claims requiring attention, correct the relevant information, and move them through the resubmission workflow.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-[#1A1053] mb-3">
-                Centralized Claim Search
-              </h3>
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-                Find the claim you need quickly. Search and filter claims using relevant information such as:Patient, Claim number, Authorization number and more. Spend less time looking for claims and more time resolving them.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-[#1A1053] mb-3">
                 Data Security &amp; Control
               </h3>
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+              <p className="text-slate-600 text-sm leading-relaxed">
                 Your claims data is critical to your organization. Claim Sync is designed with controlled access and data management in mind, helping organizations maintain appropriate visibility over sensitive healthcare and financial information.
               </p>
             </div>
@@ -211,27 +200,29 @@ export function ClaimSyncDetail() {
             {/* Left Column */}
             <div className="flex-1 flex flex-col items-start">
               <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1053] tracking-tight mb-4">
-                Built for the Modern Healthcare Stack
+                Built for Healthcare Revenue Cycle Teams
               </h2>
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
-                Claim Sync is architected on FHIR standards to ensure near-zero latency communication between your EHR and the billing infrastructure. Fully HIPAA compliant and enterprise-grade.
+              <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-6 max-w-lg">
+                Claim Sync can support organizations that need a more structured approach to electronic claims management.
               </p>
-
-              {/* Compliance Badges */}
-              <div className="flex flex-wrap items-center gap-8 text-slate-600">
-                <div className="flex flex-col items-center gap-2">
-                  <Network className="h-6 w-6 text-slate-700" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">HL7 v2/v3</span>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <Boxes className="h-6 w-6 text-slate-700" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">FHIR R4</span>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <Shield className="h-6 w-6 text-slate-700" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">HITRUST</span>
-                </div>
-              </div>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700 font-medium">
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[#1A1053]" />
+                  Clinics &amp; Medical Centers
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[#1A1053]" />
+                  Hospitals &amp; Healthcare Networks
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[#1A1053]" />
+                  Doctors
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[#1A1053]" />
+                  Patients
+                </li>
+              </ul>
             </div>
 
             {/* Right 2x2 EHR Cards */}
@@ -261,25 +252,6 @@ export function ClaimSyncDetail() {
         </div>
       </section>
 
-      {/* 4.5 Built for Healthcare Revenue Cycle Teams */}
-      <section className="py-20 md:py-24 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-5 md:px-8 lg:px-12 max-w-7xl">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1053] tracking-tight mb-4">
-              Built for Healthcare Revenue Cycle Teams
-            </h2>
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
-              Claim Sync can support organizations that need a more structured approach to electronic claims management.
-            </p>
-            <ul className="list-disc pl-6 text-slate-600 text-base md:text-lg leading-relaxed space-y-2">
-              <li>Clinics &amp; Medical Centers</li>
-              <li>Hospitals &amp; Healthcare Networks</li>
-              <li>Doctors</li>
-              <li>Patients</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
       {/* 5. Testimonial Quote Section */}
       <section className="py-20 md:py-24 bg-white">
