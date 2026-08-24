@@ -1,8 +1,8 @@
 import { Navbar } from "@/components/navbar";
 import { CareersHero } from "@/components/careers-hero";
-import { CareersCulture } from "@/components/careers-culture";
+// import { CareersCulture } from "@/components/careers-culture";
 import { CareersJobs } from "@/components/careers-jobs";
-import { CareersApplication } from "@/components/careers-application";
+// import { CareersApplication } from "@/components/careers-application";
 import { Footer } from "@/components/footer";
 
 export default function CareersPage() {

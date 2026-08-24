@@ -1,10 +1,10 @@
-import { Navbar } from "@/components/navbar";
-import { InfraHero } from "@/components/infra-hero";
-import { InfraStats } from "@/components/infra-stats";
-import { InfraSecurity } from "@/components/infra-security";
-import { InfraIntegration } from "@/components/infra-integration";
-import { TestimonialsSection } from "@/components/testimonials-section";
-import { Footer } from "@/components/footer";
+// import { Navbar } from "@/components/navbar";
+// import { InfraHero } from "@/components/infra-hero";
+// import { InfraStats } from "@/components/infra-stats";
+// import { InfraSecurity } from "@/components/infra-security";
+// import { InfraIntegration } from "@/components/infra-integration";
+// import { TestimonialsSection } from "@/components/testimonials-section";
+// import { Footer } from "@/components/footer";
 
 export default function InfrastructurePage() {
   return null;

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, ShieldCheck, RefreshCw, Search, Network, Boxes, Shield } from "lucide-react";
+import { ShieldCheck, RefreshCw, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import image4 from "@/assets/images/image4.png";

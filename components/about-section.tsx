@@ -1,14 +1,14 @@
 "use client";
 
-import { Zap, ShieldCheck, Heart, Share2, ArrowRight } from "lucide-react";
+import { Zap, ShieldCheck, Heart, Share2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 
 import aboutHero from "@/assets/images/about-hero.png";
-import aboutCeo from "@/assets/images/about-ceo.png";
-import aboutCto from "@/assets/images/about-cto.png";
-import aboutCfo from "@/assets/images/about-cfo.png";
+// import aboutCeo from "@/assets/images/about-ceo.png";
+// import aboutCto from "@/assets/images/about-cto.png";
+// import aboutCfo from "@/assets/images/about-cfo.png";
 
 export function AboutSection() {
   useEffect(() => {
