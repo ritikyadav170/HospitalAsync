@@ -195,13 +195,13 @@ importers:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.3)
       next:
-        specifier: ^16.1.0
+        specifier: ^16.2.7
         version: 16.1.0(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       papaparse:
         specifier: ^5.5.3
         version: 5.5.3
       react:
-        specifier: ^19.2.3
+        specifier: ^19.2.7
         version: 19.2.3
       react-confetti:
         specifier: ^6.4.0
@@ -210,7 +210,7 @@ importers:
         specifier: ^9.13.0
         version: 9.13.0(react@19.2.3)
       react-dom:
-        specifier: ^19.2.3
+        specifier: ^19.2.7
         version: 19.2.3(react@19.2.3)
       react-dropzone:
         specifier: ^14.3.8
