@@ -188,12 +188,7 @@ export function IntelligenceSection() {
               </h2>
 
               <p className="mt-6 text-lg text-slate-500 leading-relaxed">
-                HealthSync connects critical workflows from e-claim conversion
-                and validation to revenue cycle management, clinical decision
-                support, and operational insights. With intelligent automation
-                and data-driven solutions, HealthSync helps healthcare
-                organizations reduce manual effort, improve accuracy, accelerate
-                processing, and make better-informed decisions.
+                HealthSync connects healthcare operations through intelligent, integrated solutions—helping hospitals streamline workflows, optimize revenue, improve visibility, and make smarter decisions
               </p>
             </div>
 

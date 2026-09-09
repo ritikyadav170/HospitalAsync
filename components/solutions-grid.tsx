@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, WalletCards, MessageSquareWarning, Activity, Cpu } from "lucide-react";
+import { ChevronRight, FileCheck, MessageSquareWarning, Activity, Cpu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -29,9 +29,9 @@ export function SolutionsGrid() {
 
   const features = [
     {
-      title: "Claim Sync",
+      title: "ClaimSync",
       desc: "Automate and streamline your claims lifecycle with AI-driven validation. Reduce processing errors by 40% while ensuring complete HIPAA compliance and transparent audit trails for large-scale operations.",
-      icon: <WalletCards className="h-5 w-5" />,
+      icon: <FileCheck className="h-5 w-5" />,
       image: solution1,
       color: "text-teal-600",
       href: "/solutions/claim-sync",

@@ -82,7 +82,7 @@
 
 "use client";
 
-import { ArrowRight, ShieldCheck, Play } from "lucide-react";
+import { ArrowRight, ShieldCheck, Play} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -99,7 +99,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#f8f9fc] pt-18 pb-4 md:pt-24 md:pb-8 lg:pt-10 lg:pb-8"
+      className="relative overflow-hidden bg-[#f8f9fc] py-12 sm:py-16 lg:py-20"
     >
       {/* Premium animated background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -118,37 +118,52 @@ export function HeroSection() {
       </div>
 
       <div className="container relative z-10 mx-auto px-5 md:px-8 lg:px-12 max-w-7xl">
-        <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
           {/* Left Content */}
-          <div className={`flex flex-[0.95] flex-col items-start gap-7 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          <div className={`flex flex-1 flex-col items-start gap-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2.5 rounded-full bg-[#1A1053]/[0.06] border border-[#1A1053]/10 px-5 py-2 text-sm font-semibold text-[#1A1053] backdrop-blur-sm">
-              <span className="relative flex h-2.5 w-2.5">
+            <div className="inline-flex items-center gap-2.5 rounded-full bg-[#1A1053]/[0.06] border border-[#1A1053]/10 px-4 py-1.5 text-xs sm:text-sm font-semibold text-[#1A1053] backdrop-blur-sm shadow-xs">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1A1053] opacity-40" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1A1053]" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1A1053]" />
               </span>
-              Next-Gen Health SaaS
+              HealthSync Healthcare Technology
             </div>
 
             {/* Heading */}
-            <h1 className="text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] font-bold tracking-tight text-[#1A1053] max-w-2xl leading-[1.1]">
-              Healthcare Intelligence For{" "}
-              <span className="relative inline-block">
-                Hospitals
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#1A1053]/20" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.35rem] font-bold tracking-tight text-[#1A1053] max-w-3xl leading-[1.2]">
+              HealthSync <span className="text-slate-300 font-normal mx-1"></span> Connecting Healthcare.{" "}
+              <span className="relative inline-block bg-gradient-to-r from-[#1A1053] via-[#332296] to-[#4F46E5] bg-clip-text text-transparent">
+                Simplifying Operations.
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#4F46E5]/25" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
                 </svg>
-              </span>{" "}
-              & Doctors
+              </span>
             </h1>
 
             {/* Description */}
-            <p className="max-w-[540px] text-lg text-slate-500 leading-relaxed">
-              HealthSync is an intelligent healthcare platform designed to empower hospitals and doctors with data-driven insights, seamless workflows, and real-time analytics.
+            <p className="max-w-[620px] text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+              An integrated healthcare technology ecosystem built to streamline hospital operations, optimize revenue, improve patient experience, and drive smarter decision-making.
             </p>
+
+            {/* Feature Highlights Pills */}
+            {/* <div className="flex flex-wrap gap-2.5 pt-1">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-[#1A1053] border border-slate-200/80 shadow-xs">
+                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" /> Streamline Operations
+              </span>
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs">
+                <TrendingUp className="w-3.5 h-3.5 text-emerald-600" /> Optimize Revenue
+              </span>
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs">
+                <Heart className="w-3.5 h-3.5 text-rose-500" /> Patient Experience
+              </span>
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-amber-500" /> Smarter Decisions
+              </span>
+            </div> */}
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
@@ -191,7 +206,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Image */}
-          <div className={`relative flex-[1.05] w-full max-w-xl lg:max-w-none lg:-mt-31 xl:-mt-40 transition-all duration-1000 delay-300 ease-out xl:ml-6 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          <div className={`relative flex-1 w-full max-w-xl lg:max-w-none transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
             <div className="relative animate-float">
               {/* Decorative ring behind image */}

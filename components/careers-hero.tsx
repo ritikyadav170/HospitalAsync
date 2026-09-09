@@ -28,11 +28,11 @@ export function CareersHero() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1053] leading-[1.12] tracking-tight mb-6">
-            Help us synchronize the future of global healthcare.
+            Shape the Future of Healthcare
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10">
-            We&apos;re building the infrastructure for the next generation of medical innovation. Join a team of visionaries dedicated to making health data fluid, secure, and life-saving.
+            At HealthSync, we&apos;re solving real healthcare challenges with technology. Join a team of innovators, problem-solvers, and healthcare technology enthusiasts who are building solutions that make a difference.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

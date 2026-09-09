@@ -1,6 +1,6 @@
 "use client";
 
-import { Zap, ShieldCheck, Heart, Share2 } from "lucide-react";
+import { Zap, ShieldCheck, Heart, Share2, Users, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -53,77 +53,121 @@ export function AboutSection() {
 
         {/* Hero Content */}
         <div className="container mx-auto px-6 lg:px-12 relative z-20 text-white max-w-7xl">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/80 border border-slate-700 px-3.5 py-1 text-[11px] font-semibold tracking-wider text-slate-200 uppercase mb-6 shadow-sm transition-transform hover:scale-105 cursor-default">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-sky-200 uppercase mb-6 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
               ESTABLISHED 2026
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-5">
-              The Future of Connected Healthcare
+            <div className="text-xs sm:text-sm font-bold tracking-widest text-sky-300 uppercase mb-3">
+              HealthSync: The Digital Engine for Modern Healthcare
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-[1.15] tracking-tight mb-6">
+              Transforming Healthcare.{" "}
+              <span className="bg-gradient-to-r from-sky-300 via-cyan-200 to-indigo-200 bg-clip-text text-transparent block sm:inline">
+                Empowering Better Outcomes.
+              </span>
             </h1>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-white leading-tight mb-4">
-              HealthSync: Building the Future of Healthcare
-            </h2>
-
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl font-normal">
-              Healthcare is becoming more connected, data-driven, and
-              technology-enabled. But for providers, payers, and healthcare
-              organizations, connecting systems and information can still be
-              complex.
+            <p className="text-base sm:text-lg text-slate-200/90 leading-relaxed max-w-2xl font-normal">
+              HealthSync brings together intelligent solutions across clinical, financial, administrative, and operational functions, helping healthcare organizations work smarter, operate efficiently, and deliver better outcomes.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 2. Mission Section */}
-      <section className="py-20 md:py-28 bg-white animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out">
-        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left Headline */}
-            <div className="lg:col-span-5 flex flex-col items-start">
-              <span className="text-xs font-extrabold tracking-widest text-sky-600 uppercase mb-4">
-                01. OUR MISSION
+      {/* 2. Our Purpose & Core Principles Section */}
+      <section className="py-20 md:py-28 bg-[#f8f9fc] animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 delay-100 ease-out relative overflow-hidden">
+        {/* Ambient background glow */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-sky-100/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
+          
+          {/* Header Block */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
+            <div className="lg:col-span-6 flex flex-col items-start">
+              <span className="inline-flex items-center gap-2 rounded-full bg-sky-100/80 px-4 py-1.5 text-xs font-bold tracking-widest text-sky-900 border border-sky-200/80 uppercase mb-4 shadow-2xs">
+                01. OUR PURPOSE
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1053] leading-tight tracking-tight">
-                What We Believe
+                Transforming Healthcare Through Smarter Technology
               </h2>
             </div>
 
-            {/* Right Content */}
-            <div className="lg:col-span-7 flex flex-col gap-6 text-slate-600 leading-relaxed text-base sm:text-lg">
-              <div className="flex flex-col gap-6">
-                <div>
-                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">
-                    1) Technology Should Empower People:
-                  </span>
-                  <span>
-                    Technology should help healthcare professionals do their
-                    jobs better not make their jobs harder.
-                  </span>
-                </div>
-                <div>
-                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">
-                    2) Data Should Create Value:
-                  </span>
-                  <span>
-                    Healthcare data is most powerful when the right information
-                    reaches the right people at the right time.
-                  </span>
-                </div>
-                <div>
-                  <span className="font-bold text-[#1A1053] text-xl block sm:inline mr-2">
-                    3) Simplicity Is Powerful:
-                  </span>
-                  <span>
-                    Sophisticated technology should still feel intuitive to the
-                    people using it every day.
-                  </span>
-                </div>
-              </div>
+            <div className="lg:col-span-6 flex flex-col justify-center">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+                At HealthSync, we believe technology should make healthcare simpler, smarter, and more connected. Our solutions are designed to help healthcare organizations streamline operations, turn data into actionable insights, and empower their teams to deliver better outcomes.
+              </p>
             </div>
           </div>
+
+          {/* 3 Principles Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            
+            {/* Principle 1 */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg shadow-slate-200/40 hover:shadow-xl hover:border-indigo-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Users className="h-6 w-6" />
+                  </div>
+                  <span className="text-2xl font-black text-slate-300 group-hover:text-indigo-600 transition-colors">
+                    01
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-[#1A1053] mb-3 group-hover:text-indigo-900 transition-colors">
+                  Empower People
+                </h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Technology should simplify the work of healthcare professionals and help them focus on what matters most.
+                </p>
+              </div>
+            </div>
+
+            {/* Principle 2 */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg shadow-slate-200/40 hover:shadow-xl hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Sparkles className="h-6 w-6" />
+                  </div>
+                  <span className="text-2xl font-black text-slate-300 group-hover:text-sky-600 transition-colors">
+                    02
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-[#1A1053] mb-3 group-hover:text-sky-900 transition-colors">
+                  Turn Data Into Insights
+                </h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  The right information, at the right time, enables better decisions and stronger outcomes.
+                </p>
+              </div>
+            </div>
+
+            {/* Principle 3 */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg shadow-slate-200/40 hover:shadow-xl hover:border-emerald-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Zap className="h-6 w-6" />
+                  </div>
+                  <span className="text-2xl font-black text-slate-300 group-hover:text-emerald-600 transition-colors">
+                    03
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-[#1A1053] mb-3 group-hover:text-emerald-900 transition-colors">
+                  Make Complexity Simple
+                </h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Powerful technology should be intuitive, practical, and easy to use.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
@@ -194,12 +238,10 @@ export function AboutSection() {
                 <ShieldCheck className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Data Protection
+                Data Security &amp; Privacy
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Healthcare technology comes with a responsibility to protect
-                sensitive information and support the organizations that depend
-                on it.
+                Protecting sensitive healthcare information is at the heart of HealthSync, with secure access, responsible data management, and privacy built into our solutions.
               </p>
             </div>
 
@@ -209,12 +251,10 @@ export function AboutSection() {
                 <Zap className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Security &amp; Access
+                Built on Trust
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                HealthSync approaches technology development with security,
-                controlled access, responsible data management, and operational
-                reliability in mind.
+                We design HealthSync with security, privacy, accountability, and reliability at every stage, helping healthcare organizations manage sensitive data with confidence.
               </p>
             </div>
 
@@ -224,12 +264,10 @@ export function AboutSection() {
                 <Heart className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1053] mb-3">
-                Connected Workflows
+                Smarter, Connected Operations
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Our solutions are designed to help organizations build connected
-                workflows without losing sight of the importance of trust,
-                privacy, and accountability.
+                HealthSync connects essential healthcare workflows, enabling organizations to streamline operations, improve visibility, and make better-informed decisions.
               </p>
             </div>
 
@@ -242,9 +280,7 @@ export function AboutSection() {
                 Regulatory Control
               </h3>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Specific security, compliance, and regulatory controls depend on
-                the applicable HealthSync solution, deployment architecture, and
-                customer environment.
+                Built for the UAE healthcare ecosystem, HealthSync supports organizations across Dubai, Sharjah, and Al Ain with solutions designed around applicable security, privacy, and regulatory requirements.
               </p>
             </div>
           </div>

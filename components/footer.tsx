@@ -680,7 +680,7 @@ const legalLinks = [
 const socialLinks = [
   { icon: Globe, href: "/infrastructure", label: "Global Infrastructure" },
   { icon: Share2, href: "/solutions", label: "Explore Solutions" },
-  { icon: AtSign, href: "mailto:enterprise@healthsync.io", label: "Contact Support", isExternal: true },
+  { icon: AtSign, href: "mailto:info@healthsync.ae", label: "Contact Support", isExternal: true },
 ];
 
 const certifications = [
@@ -797,8 +797,8 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5 text-[13px] text-white/40">
                 <Mail className="h-3.5 w-3.5 shrink-0 text-white/30" />
-                <a href="mailto:enterprise@healthsync.io" className="hover:text-white/70 transition-colors">
-                  enterprise@healthsync.io
+                <a href="mailto:info@healthsync.ae" className="hover:text-white/70 transition-colors">
+                  info@healthsync.ae
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-[13px] text-white/40">
