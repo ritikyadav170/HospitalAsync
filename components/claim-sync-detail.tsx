@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ShieldCheck, RefreshCw, Search } from "lucide-react";
+import { ShieldCheck, RefreshCw, Search, FileCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import image4 from "@/assets/images/image4.png";
@@ -26,12 +26,12 @@ export function ClaimSyncDetail() {
               className={`flex-[0.95] flex flex-col items-start gap-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
               <div className="inline-flex items-center gap-2 rounded-full bg-cyan-50 px-4 py-1.5 text-xs font-semibold text-teal-700 border border-cyan-200/60 shadow-sm">
-                <span className="h-2 w-2 rounded-full bg-teal-500 animate-pulse" />
+                <FileCheck className="h-4 w-4 text-teal-600" />
                 Smart Claim Solutions
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1053] leading-[1.12] tracking-tight">
-                Claim Sync
+                ClaimSync
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
@@ -57,7 +57,7 @@ export function ClaimSyncDetail() {
                 <div className="relative rounded-3xl bg-slate-900 border-[10px] border-slate-800 p-2 shadow-2xl shadow-indigo-950/20 overflow-hidden aspect-[4/3] flex items-center justify-center">
                   <Image
                     src={image4}
-                    alt="Claim Sync Dashboard"
+                    alt="ClaimSync Dashboard"
                     className="object-cover w-full h-full rounded-xl"
                   />
                   {/* Floating Status Card Badge Overlay */}
@@ -88,7 +88,7 @@ export function ClaimSyncDetail() {
                 Built for Healthcare Revenue Cycle Teams
               </h2>
               <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-6">
-                Claim Sync can support organizations that need a more structured approach to electronic claims management.
+                ClaimSync can support organizations that need a more structured approach to electronic claims management.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-200 text-sm md:text-base font-medium">
                 <li className="flex items-center gap-2">

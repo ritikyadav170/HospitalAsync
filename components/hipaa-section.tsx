@@ -216,7 +216,7 @@ export function HipaaSection() {
                   EMAIL SUPPORT
                 </span>
                 <span className="text-base font-extrabold text-[#1A1053] group-hover:text-teal-700 transition-colors">
-                  enterprise@healthsync.io
+                  info@healthsync.ae
                 </span>
               </div>
             </div>

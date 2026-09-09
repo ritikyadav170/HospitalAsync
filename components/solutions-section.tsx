@@ -81,7 +81,7 @@
 "use client";
 
 import {
-  UserRound,
+  FileCheck,
   Stethoscope,
   Microscope,
   PackagePlus,
@@ -94,8 +94,8 @@ import { useEffect, useRef, useState } from "react";
 
 const solutions = [
   {
-    icon: UserRound,
-    title: "Claim Sync",
+    icon: FileCheck,
+    title: "ClaimSync",
     desc: "Automate e-claim conversion, validation, submission, and resubmission to improve accuracy and accelerate reimbursement cycles.",
     href: "/solutions/claim-sync",
     accent: "#1A1053",

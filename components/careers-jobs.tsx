@@ -128,7 +128,10 @@ export function CareersJobs() {
 
         <div className={`text-center transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-sm text-slate-500 mb-3">Don&apos;t see a role that fits? We&apos;re always looking for talented individuals.</p>
-          <a href="#general-app" className="text-sm font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-1 hover:text-indigo-600 hover:border-indigo-600 transition-colors">
+          <a
+            href="mailto:info@healthsync.ae?subject=General%20Application%20-%20HealthSync"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A1053] border-b-2 border-[#1A1053] pb-1 hover:text-indigo-600 hover:border-indigo-600 transition-colors"
+          >
             Send a General Application
           </a>
         </div>
