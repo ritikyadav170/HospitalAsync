@@ -82,7 +82,7 @@
 
 "use client";
 
-import { ArrowRight, ShieldCheck, Play} from "lucide-react";
+import { ArrowRight, ShieldCheck, Play, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -133,14 +133,16 @@ export function HeroSection() {
               HealthSync Healthcare Technology
             </div>
 
-            {/* Heading */}
-            <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.35rem] font-bold tracking-tight text-[#1A1053] max-w-3xl leading-[1.2]">
-              HealthSync <span className="text-slate-300 font-normal mx-1"></span> Connecting Healthcare.{" "}
-              <span className="relative inline-block bg-gradient-to-r from-[#1A1053] via-[#332296] to-[#4F46E5] bg-clip-text text-transparent">
+
+            <h1 className="text-[1.75rem] sm:text-[2.25rem] lg:text-[3rem] xl:text-[2.75rem] font-bold tracking-tight text-[#1A1053] leading-[1.15] w-full">
+              <span className="block font-black text-[#1A1053]">
+                Connecting Healthcare.
+              </span>
+              <span className="relative inline-block bg-gradient-to-r from-[#1A1053] via-[#332296] to-[#4F46E5] bg-clip-text text-transparent font-black mt-1">
                 Simplifying Operations.
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#4F46E5]/25" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* <svg className="absolute -bottom-2.5 left-0 w-full h-3.5  text-[#4F46E5]/30" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 10C50 2 150 2 198 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-                </svg>
+                </svg> */}
               </span>
             </h1>
 
@@ -150,20 +152,17 @@ export function HeroSection() {
             </p>
 
             {/* Feature Highlights Pills */}
-            {/* <div className="flex flex-wrap gap-2.5 pt-1">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-[#1A1053] border border-slate-200/80 shadow-xs">
-                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" /> Streamline Operations
+            <div className="flex flex-wrap gap-2.5 pt-1">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs sm:text-sm font-semibold text-[#1A1053] border border-slate-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:border-[#1A1053]/30 transition-colors">
+                <CheckCircle2 className="w-4 h-4 text-indigo-600" /> Hospital Operations
               </span>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs">
-                <TrendingUp className="w-3.5 h-3.5 text-emerald-600" /> Optimize Revenue
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs sm:text-sm font-semibold text-slate-700 border border-slate-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:border-emerald-500/30 transition-colors">
+                <TrendingUp className="w-4 h-4 text-emerald-600" /> Revenue Optimization
               </span>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs">
-                <Heart className="w-3.5 h-3.5 text-rose-500" /> Patient Experience
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs sm:text-sm font-semibold text-slate-700 border border-slate-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:border-amber-500/30 transition-colors">
+                <Sparkles className="w-4 h-4 text-amber-500" /> AI Insights
               </span>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs">
-                <Sparkles className="w-3.5 h-3.5 text-amber-500" /> Smarter Decisions
-              </span>
-            </div> */}
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
