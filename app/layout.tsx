@@ -33,11 +33,16 @@ export const metadata: Metadata = {
     url: true,
   },
   icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
     apple: [
-      "/icons/icon-192x192.png",
-      "/icons/icon-256x256.png",
-      "/icons/icon-384x384.png",
-      "/icons/icon-512x512.png",
+      { url: "/apple-icon.png" },
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
     ],
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_URL as string),
