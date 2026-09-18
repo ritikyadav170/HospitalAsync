@@ -42,12 +42,6 @@ export function CareersHero() {
             >
               View Openings <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
             </a>
-            <a
-              href="#culture"
-              className="rounded-full bg-white border border-slate-200/80 px-8 py-3.5 text-sm font-semibold text-[#1A1053] shadow-sm hover:bg-slate-50 hover:scale-105 transition-all duration-300"
-            >
-              Our Culture
-            </a>
           </div>
         </div>
 
