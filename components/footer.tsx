@@ -22,6 +22,7 @@ const productLinks = [
   { label: "Complaint Management", href: "/solutions/complaint-management" },
   { label: "Incident Management", href: "/solutions/incident-management" },
   { label: "Asset Management", href: "/solutions/asset-management" },
+  { label: "HIMS", href: "/solutions/hims" },
   { label: "All Solutions", href: "/solutions" },
 ];
 

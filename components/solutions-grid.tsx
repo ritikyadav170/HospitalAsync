@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, FileCheck, MessageSquareWarning, Activity, Cpu } from "lucide-react";
+import { ChevronRight, FileCheck, MessageSquareWarning, Activity, Cpu, Database } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -36,7 +36,7 @@ export function SolutionsGrid() {
       color: "text-teal-600",
       href: "/solutions/claim-sync",
       delay: "delay-100",
-      isLaunched: true
+      isLaunched: true,
     },
     {
       title: "Complaint Management",
@@ -44,9 +44,9 @@ export function SolutionsGrid() {
       icon: <MessageSquareWarning className="h-5 w-5" />,
       image: solution2,
       color: "text-blue-600",
-      href: "/solutions",
+      href: "/solutions/complaint-management",
       delay: "delay-200",
-      isLaunched: false
+      isLaunched: true,
     },
     {
       title: "Incident Management",
@@ -54,9 +54,9 @@ export function SolutionsGrid() {
       icon: <Activity className="h-5 w-5" />,
       image: solution3,
       color: "text-red-500",
-      href: "/solutions",
+      href: "/solutions/incident-management",
       delay: "delay-300",
-      isLaunched: false
+      isLaunched: true,
     },
     {
       title: "Asset Management",
@@ -64,24 +64,38 @@ export function SolutionsGrid() {
       icon: <Cpu className="h-5 w-5" />,
       image: solution4,
       color: "text-indigo-600",
-      href: "/solutions",
+      href: "/solutions/asset-management",
       delay: "delay-400",
-      isLaunched: false
-    }
+      isLaunched: true,
+    },
+    {
+      title: "HIMS",
+      desc: "Centralize, organize, and manage healthcare information securely. HealthSync’s Healthcare Information Management System helps hospitals streamline clinical and administrative data to make more informed decision.",
+      icon: <Database className="h-5 w-5" />,
+      image: solution1,
+      color: "text-sky-600",
+      href: "/solutions/hims",
+      delay: "delay-500",
+      isLaunched: true,
+    },
   ];
 
   return (
     <section ref={sectionRef} className="pb-32 bg-white relative">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feat, i) => (
-            <div key={i} className={`flex flex-col rounded-[2rem] border border-slate-100 bg-white overflow-hidden shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-slate-200/60 transition-all duration-700 ease-out group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} ${feat.delay}`}>
-              
+            <div
+              key={i}
+              className={`flex flex-col rounded-[2rem] border border-slate-100 bg-white overflow-hidden shadow-xl shadow-slate-200/40 hover:shadow-2xl hover:shadow-slate-200/60 transition-all duration-700 ease-out group ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              } ${feat.delay}`}
+            >
               {/* Image Section */}
               <div className="relative w-full aspect-[16/9] bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-                <Image 
-                  src={feat.image} 
-                  alt={feat.title} 
+                <Image
+                  src={feat.image}
+                  alt={feat.title}
                   className="w-full h-full object-contain drop-shadow-md transition-transform duration-700 group-hover:scale-105 animate-float"
                 />
               </div>
@@ -89,30 +103,29 @@ export function SolutionsGrid() {
               {/* Content Section */}
               <div className="p-8 md:p-10 flex flex-col flex-grow">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className={`p-2 bg-slate-50 rounded-lg transition-colors duration-300 group-hover:bg-slate-100 ${feat.color}`}>
+                  <div
+                    className={`p-2 bg-slate-50 rounded-lg transition-colors duration-300 group-hover:bg-slate-100 ${feat.color}`}
+                  >
                     {feat.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-[#1A1053] group-hover:text-teal-700 transition-colors duration-300">{feat.title}</h3>
+                  <h3 className="text-2xl font-bold text-[#1A1053] group-hover:text-teal-700 transition-colors duration-300">
+                    {feat.title}
+                  </h3>
                 </div>
-                
+
                 <p className="text-slate-600 leading-relaxed mb-10 flex-grow">
                   {feat.desc}
                 </p>
 
                 <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100">
-                  {feat.isLaunched ? (
-                    <Link 
-                      href={feat.href}
-                      className="flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors"
-                    >
-                      View More <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  ) : (
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest cursor-default">
-                      Coming Soon
-                    </div>
-                  )}
-                  <Link 
+                  <Link
+                    href={feat.href}
+                    className="flex items-center text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors"
+                  >
+                    View More{" "}
+                    <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <Link
                     href="/demo"
                     className="rounded-full bg-[#1A1053] px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 hover:scale-105 transition-all duration-300"
                   >
@@ -120,7 +133,6 @@ export function SolutionsGrid() {
                   </Link>
                 </div>
               </div>
-
             </div>
           ))}
         </div>

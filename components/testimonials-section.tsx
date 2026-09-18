@@ -79,7 +79,7 @@ const testimonials = [
   {
     quote:
       "HealthSync has helped us streamline our e-claim processes from data conversion and validation through submission. The reduction in manual work has made our claims operations significantly more efficient.",
-    author: "Dr. Elena Rodriguez",
+    author: "Dubai London",
     role: "Chief Information Officer, Dubai Hospital",
   },
   {
