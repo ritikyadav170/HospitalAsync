@@ -84,7 +84,7 @@ export function AboutSection() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl relative z-10">
-          
+
           {/* Header Block */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
             <div className="lg:col-span-6 flex flex-col items-start">
@@ -105,7 +105,7 @@ export function AboutSection() {
 
           {/* 3 Principles Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            
+
             {/* Principle 1 */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg shadow-slate-200/40 hover:shadow-xl hover:border-indigo-200 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
               <div>
