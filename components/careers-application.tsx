@@ -1,115 +1,21 @@
-// "use client";
-
-// import { CheckCircle2 } from "lucide-react";
-// import { useEffect, useRef, useState } from "react";
-
-// export function CareersApplication() {
-//   const [isVisible, setIsVisible] = useState(false);
-//   const sectionRef = useRef<HTMLElement>(null);
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           setIsVisible(true);
-//           observer.disconnect();
-//         }
-//       },
-//       { threshold: 0.1 }
-//     );
-//     if (sectionRef.current) observer.observe(sectionRef.current);
-//     return () => observer.disconnect();
-//   }, []);
-
-//   return (
-//     <section ref={sectionRef} id="general-app" className="py-18 bg-white overflow-hidden">
-//       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-6xl">
-//         <div className={`flex flex-col lg:flex-row bg-[#f8fafc] rounded-[2.5rem] overflow-hidden border border-slate-100 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-
-//           {/* Left Side */}
-//           <div className={`w-full lg:w-1/2 p-10 md:p-16 flex flex-col justify-center transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-//             <h2 className="text-3xl font-bold text-[#1A1053] mb-6">Your Journey Starts Here</h2>
-//             <p className="text-slate-600 mb-12 leading-relaxed">
-//               Our application process is designed to be as fluid as our data models. Tell us about your background and what excites you about the future of health technology.
-//             </p>
-
-//             <div className="space-y-2">
-//               <div className="flex gap-4 group">
-//                 <div className="shrink-0 mt-1">
-//                   <CheckCircle2 className="h-6 w-6 text-teal-600 fill-teal-100 group-hover:scale-125 transition-transform" />
-//                 </div>
-//                 <div>
-//                   <h4 className="font-bold text-[#1A1053] mb-1 group-hover:text-teal-700 transition-colors">Initial Review</h4>
-//                   <p className="text-sm text-slate-500 leading-relaxed">Our talent team reviews every application within 72 hours.</p>
-//                 </div>
-//               </div>
-//               <div className="flex gap-4 group mt-6">
-//                 <div className="shrink-0 mt-1">
-//                   <CheckCircle2 className="h-6 w-6 text-teal-600 fill-teal-100 group-hover:scale-125 transition-transform" />
-//                 </div>
-//                 <div>
-//                   <h4 className="font-bold text-[#1A1053] mb-1 group-hover:text-teal-700 transition-colors">Clinical & Technical Sync</h4>
-//                   <p className="text-sm text-slate-500 leading-relaxed">Engage with future teammates on real-world HealthSync challenges.</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Right Side - Form */}
-//           <div className={`w-full lg:w-1/2 p-10 md:p-16 bg-white shadow-xl shadow-slate-200/20 lg:rounded-l-[2.5rem] border-l border-slate-100 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-//             <h3 className="text-2xl font-bold text-[#1A1053] mb-8">Quick Apply</h3>
-
-//             <form className="space-y-6">
-//               <div className="flex flex-col sm:flex-row gap-6">
-//                 <div className="flex-1 space-y-2">
-//                   <label className="text-xs font-bold text-slate-600">First Name</label>
-//                   <input type="text" placeholder="Jane" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-//                 </div>
-//                 <div className="flex-1 space-y-2">
-//                   <label className="text-xs font-bold text-slate-600">Last Name</label>
-//                   <input type="text" placeholder="Doe" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-//                 </div>
-//               </div>
-
-//               <div className="space-y-2">
-//                 <label className="text-xs font-bold text-slate-600">Email Address</label>
-//                 <input type="email" placeholder="jane.doe@example.com" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-//               </div>
-
-//               <div className="space-y-2">
-//                 <label className="text-xs font-bold text-slate-600">LinkedIn Profile (Optional)</label>
-//                 <input type="text" placeholder="linkedin.com/in/janedoe" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-//               </div>
-
-//               <button type="button" className="w-full bg-[#0B0A26] text-white rounded-xl py-4 font-bold text-[15px] hover:bg-[#1A1053] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 mt-4 active:scale-95">
-//                 Begin Application
-//               </button>
-
-//               <p className="text-xs text-slate-500 text-center leading-relaxed mt-6">
-//                 By clicking, you agree to our <a href="#" className="underline hover:text-indigo-600 transition-colors">Privacy Policy</a> regarding applicant data.
-//               </p>
-//             </form>
-//           </div>
-
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
 "use client";
 
-import { CheckCircle2 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { Upload, CheckCircle2, FileText, Send, Sparkles, X } from "lucide-react";
 
 export function CareersApplication() {
   const [isVisible, setIsVisible] = useState(false);
-  const [showToast, setShowToast] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    role: "General Application",
+    message: "",
+  });
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -126,119 +32,241 @@ export function CareersApplication() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (!showToast) return;
-    const timer = setTimeout(() => setShowToast(false), 3000);
-    return () => clearTimeout(timer);
-  }, [showToast]);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setResumeFile(e.target.files[0]);
+    }
+  };
 
-  const handleBeginApplication = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    // Simulate a brief loading state, then show the toast.
-    // Replace this with your actual submit/navigation logic.
+
     setTimeout(() => {
       setIsSubmitting(false);
-      setShowToast(true);
-    }, 600);
+      setSubmitted(true);
+    }, 800);
   };
 
   return (
-    <section ref={sectionRef} id="general-app" className="py-18 bg-white overflow-hidden relative">
-      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-6xl">
-        <div className={`flex flex-col lg:flex-row bg-[#f8fafc] rounded-[2.5rem] overflow-hidden border border-slate-100 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-
-          {/* Left Side */}
-          <div className={`w-full lg:w-1/2 p-10 md:p-16 flex flex-col justify-center transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <h2 className="text-3xl font-bold text-[#1A1053] mb-6">Your Journey Starts Here</h2>
-            <p className="text-slate-600 mb-12 leading-relaxed">
-              Our application process is designed to be as fluid as our data models. Tell us about your background and what excites you about the future of health technology.
-            </p>
-
-            <div className="space-y-2">
-              <div className="flex gap-4 group">
-                <div className="shrink-0 mt-1">
-                  <CheckCircle2 className="h-6 w-6 text-teal-600 fill-teal-100 group-hover:scale-125 transition-transform" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#1A1053] mb-1 group-hover:text-teal-700 transition-colors">Initial Review</h4>
-                  <p className="text-sm text-slate-500 leading-relaxed">Our talent team reviews every application within 72 hours.</p>
-                </div>
-              </div>
-              <div className="flex gap-4 group mt-6">
-                <div className="shrink-0 mt-1">
-                  <CheckCircle2 className="h-6 w-6 text-teal-600 fill-teal-100 group-hover:scale-125 transition-transform" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#1A1053] mb-1 group-hover:text-teal-700 transition-colors">Clinical & Technical Sync</h4>
-                  <p className="text-sm text-slate-500 leading-relaxed">Engage with future teammates on real-world HealthSync challenges.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side - Form */}
-          <div className={`w-full lg:w-1/2 p-10 md:p-16 bg-white shadow-xl shadow-slate-200/20 lg:rounded-l-[2.5rem] border-l border-slate-100 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            <h3 className="text-2xl font-bold text-[#1A1053] mb-8">Quick Apply</h3>
-
-            <form className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-6">
-                <div className="flex-1 space-y-2">
-                  <label className="text-xs font-bold text-slate-600">First Name</label>
-                  <input type="text" placeholder="Jane" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-                </div>
-                <div className="flex-1 space-y-2">
-                  <label className="text-xs font-bold text-slate-600">Last Name</label>
-                  <input type="text" placeholder="Doe" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-slate-600">Email Address</label>
-                <input type="email" placeholder="jane.doe@example.com" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-slate-600">LinkedIn Profile (Optional)</label>
-                <input type="text" placeholder="linkedin.com/in/janedoe" className="w-full bg-[#f8fafc] border-transparent focus:border-indigo-300 focus:bg-white focus:ring-4 focus:ring-indigo-100 rounded-xl px-4 py-3 text-sm transition-all outline-none" />
-              </div>
-
-              <button
-                type="button"
-                onClick={handleBeginApplication}
-                disabled={isSubmitting}
-                className="w-full bg-[#0B0A26] text-white rounded-xl py-4 font-bold text-[15px] hover:bg-[#1A1053] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 mt-4 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
-              >
-                {isSubmitting ? "Submitting..." : "Begin Application"}
-              </button>
-
-              <p className="text-xs text-slate-500 text-center leading-relaxed mt-6">
-                By clicking, you agree to our <a href="#" className="underline hover:text-indigo-600 transition-colors">Privacy Policy</a> regarding applicant data.
-              </p>
-            </form>
-          </div>
-
-        </div>
-      </div>
-
-      {/* Toast */}
-      <div
-        className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#0B0A26] text-white rounded-xl px-5 py-4 shadow-2xl transition-all duration-300 ease-out ${showToast ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+    <section
+      ref={sectionRef}
+      id="application-form"
+      className="py-16 md:py-24 bg-[#f8f9fc] border-t border-slate-100 relative overflow-hidden"
+    >
+      <div className="container mx-auto px-6 lg:px-12 max-w-5xl relative z-10">
+        
+        {/* Section Header */}
+        <div
+          className={`text-center max-w-2xl mx-auto mb-12 transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-        role="status"
-        aria-live="polite"
-      >
-        <CheckCircle2 className="h-5 w-5 text-teal-400 shrink-0" />
-        <div>
-          <p className="text-sm font-bold">Application started</p>
-          <p className="text-xs text-slate-300">We've saved your progress. Check your email for next steps.</p>
-        </div>
-        <button
-          onClick={() => setShowToast(false)}
-          className="ml-2 text-slate-400 hover:text-white text-lg leading-none"
-          aria-label="Dismiss notification"
         >
-          &times;
-        </button>
+          <div className="inline-flex items-center gap-2 rounded-full bg-sky-100/80 px-4 py-1.5 text-xs font-bold tracking-widest text-sky-900 border border-sky-200/80 uppercase mb-4 shadow-xs">
+            <Sparkles className="h-3.5 w-3.5 text-sky-600 animate-pulse" />
+            CAREER OPPORTUNITIES
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1A1053] tracking-tight mb-4">
+            Send Your Application
+          </h2>
+          <p className="text-slate-600 text-base leading-relaxed">
+            Don&apos;t see a role that fits? We&apos;re always looking for talented individuals. Share your details and resume with us.
+          </p>
+        </div>
+
+        {/* Application Card Form */}
+        <div
+          className={`bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-xl shadow-slate-200/50 transition-all duration-1000 delay-200 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          {submitted ? (
+            <div className="py-12 flex flex-col items-center text-center">
+              <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center mb-6 shadow-sm">
+                <CheckCircle2 className="h-10 w-10" />
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#1A1053] mb-3">
+                Application Received!
+              </h3>
+              <p className="text-slate-600 max-w-md mb-8 leading-relaxed text-sm sm:text-base">
+                Thank you for your interest in joining HealthSync. Our recruitment and talent team will review your profile and reach out to you soon.
+              </p>
+              <button
+                onClick={() => {
+                  setSubmitted(false);
+                  setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    role: "General Application",
+                    message: "",
+                  });
+                  setResumeFile(null);
+                }}
+                className="rounded-full bg-[#1A1053] px-8 py-3.5 text-sm font-semibold text-white shadow-md hover:bg-[#1A1053]/90 transition-all cursor-pointer"
+              >
+                Submit Another Application
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Full Name */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. John Doe"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-sky-500 focus:outline-none transition-all"
+                  />
+                </div>
+
+                {/* Email Address */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="e.g. john@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-sky-500 focus:outline-none transition-all"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Phone Number */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="e.g. +971 50 123 4567"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-sky-500 focus:outline-none transition-all"
+                  />
+                </div>
+
+                {/* Role / Area of Interest */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    Role of Interest
+                  </label>
+                  <select
+                    value={formData.role}
+                    onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-800 focus:bg-white focus:border-sky-500 focus:outline-none transition-all"
+                  >
+                    <option value="General Application">General Application</option>
+                    <option value="Senior Backend Engineer (HL7/FHIR)">Senior Backend Engineer (HL7/FHIR)</option>
+                    <option value="Director of Clinical Interoperability">Director of Clinical Interoperability</option>
+                    <option value="Enterprise Account Executive">Enterprise Account Executive</option>
+                    <option value="Senior Product Designer">Senior Product Designer</option>
+                    <option value="Other">Other Position</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Resume / CV Upload Box */}
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Upload Resume / CV *
+                </label>
+                
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  required
+                  accept=".pdf,.doc,.docx"
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+
+                <div
+                  onClick={() => fileInputRef.current?.click()}
+                  className={`border-2 border-dashed rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-all ${
+                    resumeFile
+                      ? "border-emerald-400 bg-emerald-50/40"
+                      : "border-slate-300 bg-slate-50/60 hover:border-sky-500 hover:bg-sky-50/30"
+                  }`}
+                >
+                  {resumeFile ? (
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                        <FileText className="h-5 w-5" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-sm font-bold text-slate-800">{resumeFile.name}</p>
+                        <p className="text-xs text-slate-500">{(resumeFile.size / 1024 / 1024).toFixed(2)} MB</p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setResumeFile(null);
+                          if (fileInputRef.current) fileInputRef.current.value = "";
+                        }}
+                        className="ml-4 p-1.5 rounded-full hover:bg-slate-200 text-slate-500 transition-colors"
+                        title="Remove file"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-3">
+                        <Upload className="h-6 w-6" />
+                      </div>
+                      <p className="text-sm font-bold text-[#1A1053] mb-1">
+                        Click to upload your resume
+                      </p>
+                      <p className="text-xs text-slate-500">
+                        Supports PDF, DOC, DOCX (Max 10MB)
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+
+              {/* Message / Cover Note */}
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Message / Cover Note (Optional)
+                </label>
+                <textarea
+                  rows={3}
+                  placeholder="Tell us a little about your experience and why you'd like to join HealthSync..."
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-sky-500 focus:outline-none transition-all resize-none"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1A1053] px-9 py-4 text-sm font-bold text-white shadow-lg shadow-indigo-950/20 hover:bg-[#1A1053]/90 hover:scale-[1.01] transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed mt-2"
+              >
+                <Send className="h-4 w-4" />
+                {isSubmitting ? "Submitting Application..." : "Submit Application"}
+              </button>
+            </form>
+          )}
+        </div>
+
       </div>
     </section>
   );
