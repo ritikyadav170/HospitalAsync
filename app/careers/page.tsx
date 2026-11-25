@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { CareersHero } from "@/components/careers-hero";
-// import { CareersCulture } from "@/components/careers-culture";
 import { CareersJobs } from "@/components/careers-jobs";
-// import { CareersApplication } from "@/components/careers-application";
+import { CareersApplication } from "@/components/careers-application";
 import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Careers – HealthSync",
+  description:
+    "Join the team at HealthSync IT Solutions. Explore open positions in healthcare technology, clinical interoperability, engineering, and product.",
+};
 
 export default function CareersPage() {
   return (
@@ -11,9 +17,8 @@ export default function CareersPage() {
       <Navbar />
       <div className="flex-grow">
         <CareersHero />
-        {/* <CareersCulture /> */}
         <CareersJobs />
-        {/* <CareersApplication /> */}
+        <CareersApplication />
       </div>
       <Footer />
     </main>

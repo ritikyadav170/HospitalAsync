@@ -79,20 +79,20 @@ const testimonials = [
   {
     quote:
       "HealthSync has helped us streamline our e-claim processes from data conversion and validation through submission. The reduction in manual work has made our claims operations significantly more efficient.",
-    author: "Dr. Elena Rodriguez",
-    role: "Chief Information Officer, Dubai London Hospital",
+    author: "Dubai London",
+    role: "Chief Information Officer, Dubai Hospital",
   },
   {
     quote:
       "The validation capabilities have made a real difference to our claims process. We can identify data issues before submission, helping our team improve claim accuracy and reduce avoidable rework.",
     author: "Michael Thompson",
-    role: "Director of Revenue Cycle, Dubai London Clinic",
+    role: "Director of Revenue Cycle, Dubai  Clinic",
   },
   {
     quote:
       "HealthSync gives our team greater visibility across claims and operational workflows. Having actionable data and insights in one platform helps us respond faster and make better-informed decisions.",
     author: "Priya Shah",
-    role: "VP of Clinical Operations, Dubai London Specialty Hospital",
+    role: "VP of Clinical Operations, Dubai  Specialty Hospital",
   },
 ];
 
